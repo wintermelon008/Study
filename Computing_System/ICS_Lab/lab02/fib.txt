@@ -1,0 +1,36 @@
+.ORIG x3000
+ADD r7, r7, #1
+ADD r5, r5, #1  	
+ADD r4, r4, #10       
+ADD r0, r0, #-2
+BRp #3
+BRn #1
+ADD r7, r7, #1	
+BRnzp #15
+
+ADD r5, r5, r5
+ADD r4, r4, #-1
+BRnp #-3		
+ADD r5, r5, #-1	;r5 stores 1023
+
+ADD r1, r1, #1  	;f(n-3)
+ADD r2, r2, #1  	;f(n-2)
+ADD r3, r3, #2  	;f(n-1)
+
+ADD r7, r1, r1  	;r7=2f(n-3)
+ADD r7, r7, r3 	;r7=2f(n-3)+f(n-1)
+AND r7, r7, r5
+
+ADD r1, r2, #0
+ADD r2, r3, #0
+ADD r3, r7, #0
+
+ADD r0, r0, #-1
+BRnp #-8
+
+HALT
+.FILL #930
+.FILL #246
+.FILL #386
+.FILL #854
+.END

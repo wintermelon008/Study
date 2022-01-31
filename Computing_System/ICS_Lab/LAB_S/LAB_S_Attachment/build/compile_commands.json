@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/include  -g   -std=gnu++17 -o CMakeFiles/lc3simulator.dir/src/main.cpp.o -c /mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/src/main.cpp",
+  "file": "/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/src/main.cpp"
+},
+{
+  "directory": "/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/include  -g   -std=gnu++17 -o CMakeFiles/lc3simulator.dir/src/memory.cpp.o -c /mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/src/memory.cpp",
+  "file": "/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/src/memory.cpp"
+},
+{
+  "directory": "/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/include  -g   -std=gnu++17 -o CMakeFiles/lc3simulator.dir/src/register.cpp.o -c /mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/src/register.cpp",
+  "file": "/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/src/register.cpp"
+},
+{
+  "directory": "/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/include  -g   -std=gnu++17 -o CMakeFiles/lc3simulator.dir/src/simulator.cpp.o -c /mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/src/simulator.cpp",
+  "file": "/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment/src/simulator.cpp"
+}
+]

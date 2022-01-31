@@ -1,0 +1,7 @@
+make all --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/c/Users/Huawei/Desktop/ICS/LAB_A_Attachment'
+g++ -c -o assembler.o assembler.cpp -I. -g
+g++ -c -o main.o main.cpp -I. -g
+g++ -o assembler assembler.o main.o -I. -g
+make: Leaving directory '/mnt/c/Users/Huawei/Desktop/ICS/LAB_A_Attachment'
+ 

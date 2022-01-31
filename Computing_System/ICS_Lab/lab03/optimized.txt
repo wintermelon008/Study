@@ -1,0 +1,29 @@
+.ORIG x3000
+ADD     r7, r7, #2
+ADD     r0, r0, #-2
+BRp 	  LABEL1
+BRz      LABEL2
+ADD     r7, r7, #-1
+LABEL2
+BRnzp  FEND
+LABEL1
+ADD     r1, r1, #1
+ADD     r2, r2, #1
+START
+ADD     r1, r1, r1
+ADD     r4, r7, r1
+ADD     r1, r2, #0
+ADD     r2, r7, #0
+ADD     r7, r4, #0
+ADD     r0, r0, #-1
+BRp      START
+LD         r7, NUM
+AND     r7, r4, r7
+FEND
+NUM     
+.FILL   #1023
+.FILL   #930
+.FILL   #10
+.FILL   #246
+.FILL   #50
+.END

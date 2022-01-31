@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment'
+make: Leaving directory '/mnt/c/Users/Huawei/Desktop/ICS/LAB_S_Attachment'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 

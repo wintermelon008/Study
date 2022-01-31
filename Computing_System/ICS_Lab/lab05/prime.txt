@@ -1,0 +1,45 @@
+.ORIG x3000
+AND     r1, r1, #0
+AND     r2, r2, #0
+AND     r5, r5, #0
+JSR     JUDGE
+HALT
+JUDGE
+    ADD     r1, r1, #1
+    ADD     r2, r2, #2   
+    ADD     r5, r5, #1   
+    AND     r3, r3, #0
+    AND     r4, r4, #0
+    AND     r6, r6, #0
+    LD        r3, MINUS1
+    ADD     r3, r3, r3
+    ADD     r4, r0, r3  
+    BRp     STARTMUL
+    RET
+    STARTMUL
+        NOT     r3, r2 
+        ADD     r3, r3, #1  
+        ADD     r4, r0, r3
+        BRz      CANMOD
+        BRn      MODEND
+        STARTMOD
+            ADD     r4, r4, r3
+            BRp      STARTMOD
+            BRn      MODEND
+        CANMOD  
+            AND     r1, r1, #0
+            RET
+        MODEND
+        ADD     r6, r2, r2  
+        ADD     r2, r2, #1
+        ADD     r6, r5, r6  
+        LD         r5, MINUS1
+        ADD     r5, r6, r5  
+        NOT     r6, r0
+        ADD     r6, r6, #1  
+        ADD     r4, r6, r5      
+        BRn     STARTMUL 
+    RET
+MINUS1
+    .FILL   #65535
+.END
