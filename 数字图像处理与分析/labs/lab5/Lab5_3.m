@@ -12,8 +12,6 @@ S = qtdecomp(cameraman, .12);
 
 blocks = repmat(uint8(0),size(S));
 
-
-
 [m, n] = size(blocks);
 one = ones(m, n);
 
