@@ -1,46 +1,45 @@
-#pragma once
-
-//Êý¶ÀÖ÷½çÃæÉèÖÃ
-//#define STARTPIC "C:\\Users\\Huawei\\Desktop\\bigHomework_v1\\Bighomework_v1\\startpic.jpg"  //Í¼ÐÎÀ´Ô´
-#define STARTPIC "..\\startpic.jpg"  //Í¼ÐÎÀ´Ô´
-//Êý¶ÀÖ÷½çÃæ´óÐ¡
+ï»¿
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//#define STARTPIC "C:\\Users\\Huawei\\Desktop\\bigHomework_v1\\Bighomework_v1\\startpic.jpg"  //Í¼ï¿½ï¿½ï¿½ï¿½Ô´
+#define STARTPIC "..\\startpic.jpg"  //Í¼ï¿½ï¿½ï¿½ï¿½Ô´
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡
 #define STARTWID 900  
 #define STARTHEI 580
 
-//Êý¶ÀÊý×Ö·½¸ñ³õÊ¼Î»ÖÃ¶¨Òå
-#define NUM_BASE_WID 340  //×óÉÏ¶¥µãºá×ø±ê
-#define NUM_BASE_HEI 20	  //×óÉÏ¶¥µã×Ý×ø±ê
-#define BLOCK_SIZE 57    //Ã¿Ð¡¸ñ¿í¶È
-#define BLOCK_DISTANCE 9  //Ã¿ÏàÁÚ´ó¸ñ¼ä¾à
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ê¼Î»ï¿½Ã¶ï¿½ï¿½ï¿½
+#define NUM_BASE_WID 340  //ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define NUM_BASE_HEI 20	  //ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define BLOCK_SIZE 57    //Ã¿Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½
+#define BLOCK_DISTANCE 9  //Ã¿ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½
 
-//Ö÷½çÃæ°´Å¥³ß´ç¶¨Òå
-#define NUMBER_OF_MAIN_BUTTON 8  //°´Å¥ÊýÄ¿
-#define MAIN_BUT_BASE_WID 90  //×óÉÏ¶¥µãºá×ø±ê
-#define MAIN_BUT_BASE_HEI 100  //×óÉÏ¶¥µã×Ý×ø±ê
+//ï¿½ï¿½ï¿½ï¿½ï¿½æ°´Å¥ï¿½ß´ç¶¨ï¿½ï¿½
+#define NUMBER_OF_MAIN_BUTTON 8  //ï¿½ï¿½Å¥ï¿½ï¿½Ä¿
+#define MAIN_BUT_BASE_WID 90  //ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define MAIN_BUT_BASE_HEI 100  //ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define MAIN_BUT_WID 140
 #define MAIN_BUT_HEI 35
 #define MAIN_BUT_DISTANCE 22
 
-#define MAIN_LOGO_BASE_WID 90  //Ö÷½çÃælogo
+#define MAIN_LOGO_BASE_WID 90  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½logo
 #define MAIN_LOGO_BASE_HEI 35
 #define MAIN_LOGO_WID 180
 #define MAIN_LOGO_HEI 40
 
-#define TOSETTING_BUT_BASE_WID 25  //½øÈëÉèÖÃ½çÃæµÄ°´Å¥
+#define TOSETTING_BUT_BASE_WID 25  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½Ä°ï¿½Å¥
 #define TOSETTING_BUT_BASE_HEI 25
 #define TOSETTING_BUT_WID 30
 #define TOSETTING_BUT_HEI 30
 
-//ÉèÖÃ½çÃæ°´Å¥¶¨Òå=============================================================
+//ï¿½ï¿½ï¿½Ã½ï¿½ï¿½æ°´Å¥ï¿½ï¿½ï¿½ï¿½=============================================================
 
 
-#define SETTING_MENU_BASE_WID 250  //ÉèÖÃ½çÃæ±êÊ¶
+#define SETTING_MENU_BASE_WID 250  //ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½ï¿½Ê¶
 #define SETTING_MENU_BASE_HEI 40
 #define SETTING_MENU_WID 400
 #define SETTING_MENU_HEI 40
 
-//ÉèÖÃ½çÃæ°´Å¥
-#define NUMBER_OF_SETTING_BUTTON 2  //°´Å¥ÊýÄ¿
+//ï¿½ï¿½ï¿½Ã½ï¿½ï¿½æ°´Å¥
+#define NUMBER_OF_SETTING_BUTTON 2  //ï¿½ï¿½Å¥ï¿½ï¿½Ä¿
 #define SETTING_BUT_BASE_WID 325  
 #define SETTING_BUT_BASE_HEI 150
 #define SETTING_BUT_WID 250
@@ -48,30 +47,30 @@
 #define SETTING_BUT_DISTANCE 40
 
 
-//°ïÖú½çÃæ
-#define HELP_BACK_BUT_BASE_WID 50  //·µ»ØÉÏÒ»¼¶²Ëµ¥
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define HELP_BACK_BUT_BASE_WID 50  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëµï¿½
 #define HELP_BACK_BUT_BASE_HEI 50
 #define HELP_BACK_BUT_WID 120
 #define HELP_BACK_BUT_HEI 40
 
-#define HELP_MENU_BASE_WID 250  //°ïÖú½çÃæÖ÷±êÊ¶
+#define HELP_MENU_BASE_WID 250  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶
 #define HELP_MENU_BASE_HEI 40
 #define HELP_MENU_WID 400
 #define HELP_MENU_HEI 40
 
-#define HELP_WORD_BASE_WID 80  //°ïÖú½çÃæÎÄ±¾Î»ÖÃ
+#define HELP_WORD_BASE_WID 80  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Î»ï¿½ï¿½
 #define HELP_WORD_BASE_HEI 110
 #define HELP_WORD_WID 700
 #define HELP_WORD_HEI 35
 #define HELP_WORD_DISTANCE 20
 
-//Ä£Ê½ÉèÖÃ½çÃæ
-#define MOD_BACK_BUT_BASE_WID 50  //·µ»ØÉÏÒ»¼¶²Ëµ¥
+//Ä£Ê½ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½
+#define MOD_BACK_BUT_BASE_WID 50  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëµï¿½
 #define MOD_BACK_BUT_BASE_HEI 50
 #define MOD_BACK_BUT_WID 120
 #define MOD_BACK_BUT_HEI 40
 
-#define MOD_MENU_BASE_WID 250  //Ä£Ê½½çÃæÖ÷±êÊ¶
+#define MOD_MENU_BASE_WID 250  //Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶
 #define MOD_MENU_BASE_HEI 40
 #define MOD_MENU_WID 400
 #define MOD_MENU_HEI 40
@@ -83,128 +82,128 @@
 #define MOD_BUT_DISTANCE 40
 
 
-//¼ÓÔØ½çÃæ°´Å¥³ß´ç¶¨Òå===========================================================
+//ï¿½ï¿½ï¿½Ø½ï¿½ï¿½æ°´Å¥ï¿½ß´ç¶¨ï¿½ï¿½===========================================================
 #define LOAD_BUT_BASE_WID 250
 #define LOAD_BUT_BASE_HEI 100
 #define LOAD_BUT_WID 400
 #define LOAD_BUT_HEI 40
 #define LOAD_BUT_DISTANCE 40
 
-//¼ÓÔØ½çÃæÆäËû¶¨Òå
-#define LOAD_MENU_BASE_WID 350  //·µ»Ø½çÃæ±êÊ¶
+//ï¿½ï¿½ï¿½Ø½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define LOAD_MENU_BASE_WID 350  //ï¿½ï¿½ï¿½Ø½ï¿½ï¿½ï¿½ï¿½Ê¶
 #define LOAD_MENU_BASE_HEI 40
 #define LOAD_MENU_WID 200
 #define LOAD_MENU_HEI 40
 
-#define LOAD_PAGE_BASE_WID 400  //Ò³Âë±êÊ¶
+#define LOAD_PAGE_BASE_WID 400  //Ò³ï¿½ï¿½ï¿½Ê¶
 #define LOAD_PAGE_BASE_HEI 510
 #define LOAD_PAGE_WID 100
 #define LOAD_PAGE_HEI 40
 
 
-#define LOAD_BACKBUT_BASE_WID 50  //·µ»Ø°´Å¥
+#define LOAD_BACKBUT_BASE_WID 50  //ï¿½ï¿½ï¿½Ø°ï¿½Å¥
 #define LOAD_BACKBUT_BASE_HEI 50
 #define LOAD_BACKBUT_WID 120
 #define LOAD_BAVKBUT_HEI 40
 
-#define LAST_PAGE_BASE_WID 50  //ÉÏÒ»Ò³°´Å¥
+#define LAST_PAGE_BASE_WID 50  //ï¿½ï¿½Ò»Ò³ï¿½ï¿½Å¥
 #define LAST_PAGE_BASE_HEI 480
 #define LAST_PAGE_WID 120
 #define LAST_PAGE_HEI 40
 
-#define NEXT_PAGE_BASE_WID 730  //ÏÂÒ»Ò³°´Å¥
+#define NEXT_PAGE_BASE_WID 730  //ï¿½ï¿½Ò»Ò³ï¿½ï¿½Å¥
 #define NEXT_PAGE_BASE_HEI 480
 #define NEXT_PAGE_WID 120
 #define NEXT_PAGE_HEI 40
 
-//input½çÃæ¶¨Òå
-#define  INPUT_BUT_BACKBUT_BASE_WID 50  //·µ»Ø°´Å¥
+//inputï¿½ï¿½ï¿½æ¶¨ï¿½ï¿½
+#define  INPUT_BUT_BACKBUT_BASE_WID 50  //ï¿½ï¿½ï¿½Ø°ï¿½Å¥
 #define  INPUT_BUT_BACKBUT_BASE_HEI 50
 #define  INPUT_BUT_BACKBUT_WID 120
 #define  INPUT_BUT_BAVKBUT_HEI 40
 
  
 
-//ÍË³öÊý¶À½çÃæ¶¨Òå
-#define EXIT_BASE_WID 50  //½áÊøÌáÊ¾´Ê
+//ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¶¨ï¿½ï¿½
+#define EXIT_BASE_WID 50  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
 #define EXIT_BASE_HEI 160
 #define EXIT_WID 800
 #define EXIT_HEI 50
 
-//ÆäËû¶¨Òå===============================================================================
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½===============================================================================
 
 #define _CRT_SECURE_NO_WARNINGS 1
 
-#define DIFFICLUTY 3  //Êý¶ÀÄÑ¶È
-#define MAX_SOLUTION 20  //µ¥¸öÊý¶À×î´ó½âÊýÄ¿
-#define MIN_NUMNER 17  //Ò»¸öÊý¶ÀµÄ×îÐ¡·ÇÁãÊý×ÖÊýÄ¿
-#define MAX_SAVE 20 //×î¶àµÄ´æµµÊýÄ¿
+#define DIFFICLUTY 3  //ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¶ï¿½
+#define MAX_SOLUTION 20  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+#define MIN_NUMNER 17  //Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+#define MAX_SAVE 20 //ï¿½ï¿½ï¿½Ä´æµµï¿½ï¿½Ä¿
 
 
-int numberCount = 0;  //µ±Ç°µÄºÏ·¨Êý×ÖÊýÄ¿
-bool ifinputaccept = true;;  //ÅÐ¶ÏÊäÈëµÄÊý¶ÀÊÇ·ñºÏ·¨
+int numberCount = 0;  //ï¿½ï¿½Ç°ï¿½ÄºÏ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+bool ifinputaccept = true;;  //ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ï·ï¿½
 
-bool ifDigsudoku = true;  //ÅÐ¶ÏÊÇ·ñÉú³É¶Ô½ÇÏßÊý¶À
+bool ifDigsudoku = true;  //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½É¶Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-int wrongState[9][9] = { 0 };  //input×¨ÓÃ¼ÇÂ¼´íÎóÁÐ±í, 0Îª¶Ô£¬ 1Îª´í
+int wrongState[9][9] = { 0 };  //input×¨ï¿½Ã¼ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½, 0Îªï¿½Ô£ï¿½ 1Îªï¿½ï¿½
 int numberofwrongs = 0;
 int tempsolutiontable[9][9] = { 0 };
 
 
-//ÓÅ»¯Çó½â
-int availableNumbers[9][9][9] = { 0 };  //´æ´¢Ã¿Ò»¸öÎ»ÖÃµÄÊý×ÖËù¿ÉÄÜµÄÇé¿ö
-int availableCount[9][9] = { 0 };  //´æ´¢¶ÔÓ¦µÄÇé¿öÊýÄ¿
-int minAvailable = 9;  //¼ÇÂ¼µ±ÏÂ×îÉÙµÄ¿ÉÄÜÊý
+//ï¿½Å»ï¿½ï¿½ï¿½ï¿½
+int availableNumbers[9][9][9] = { 0 };  //ï¿½æ´¢Ã¿Ò»ï¿½ï¿½Î»ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½
+int availableCount[9][9] = { 0 };  //ï¿½æ´¢ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+int minAvailable = 9;  //ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÙµÄ¿ï¿½ï¿½ï¿½ï¿½ï¿½
 int min_row = 0, min_col = 0;
 
 char main_buttonwords[NUMBER_OF_MAIN_BUTTON][20] =
 {
-	"Éú³É",
-	"Çå¿Õ",	
-	"Çó½â",
-	"ÌáÊ¾",
-	"ÊäÈë",
-	"±£´æ",
-	"ÔØÈë",
-	"ÍË³ö"  //ÍË³öÐèÒªÔÚ×îºóÒ»Î»
+	"ï¿½ï¿½ï¿½ï¿½",
+	"ï¿½ï¿½ï¿½",	
+	"ï¿½ï¿½ï¿½",
+	"ï¿½ï¿½Ê¾",
+	"ï¿½ï¿½ï¿½ï¿½",
+	"ï¿½ï¿½ï¿½ï¿½",
+	"ï¿½ï¿½ï¿½ï¿½",
+	"ï¿½Ë³ï¿½"  //ï¿½Ë³ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»
 };
 
 char help_words[NUMBER_OF_MAIN_BUTTON][50] =
 {
-	"[Éú³É]£ºËæ»úÉú³ÉÒ»¸öÐÂµÄÊý¶À",
-	"[Çå¿Õ]: Çå³ýµ±Ç°ÒÑ¾­ÊäÈëµÄÊý×Ö",
-	"[Çó½â]£ºÇó½âµ±Ç°Êý¶À",
-	"[ÌáÊ¾]£ºÌîÈëÒ»¸öÕýÈ·µÄÊý",
-	"[ÊäÈë]£º¿ÉÒÔÊäÈë×Ô¶¨ÒåÊý¶À£¬×ó¼üÊäÈë£¬ÓÒ¼ü³·Ïú",
-	"[±£´æ]£º±£´æµ±Ç°µÄÊý¶À",
-	"[ÔØÈë]£ºÔØÈëÒÑ±£´æµÄÊý¶À",
-	"[ÍË³ö]£ºÍË³öÓÎÏ·"  //ÍË³öÐèÒªÔÚ×îºóÒ»Î»
+	"[ï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½",
+	"[ï¿½ï¿½ï¿½]: ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+	"[ï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½âµ±Ç°ï¿½ï¿½ï¿½ï¿½",
+	"[ï¿½ï¿½Ê¾]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½",
+	"[ï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½Ò¼ï¿½ï¿½ï¿½ï¿½ï¿½",
+	"[ï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½æµ±Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+	"[ï¿½ï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+	"[ï¿½Ë³ï¿½]ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½Ï·"  //ï¿½Ë³ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»
 
 };
 
 char setting_buttonwords[NUMBER_OF_SETTING_BUTTON][20] =
 {
-	"°´Å¥¹¦ÄÜ½éÉÜ",
-	"Êý¶ÀÉèÖÃ"
+	"ï¿½ï¿½Å¥ï¿½ï¿½ï¿½Ü½ï¿½ï¿½ï¿½",
+	"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
 };
 
 ///*
-//Ñ¡ÊýÐ¡´°¿ÚÉèÖÃ  //Ä¿Ç°ÔÝÎÞÓÃ
+//Ñ¡ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  //Ä¿Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #define NUMBERWID 155
 #define NUMBERHEI 155
 #define NUM_BLOCKSIZE 45
 #define NUM_BLOCKDISTANCE 5
-//×¢£¬ÕâÀïµÄ²ÎÊýÉèÖÃÈÏÎªÍâ±ß¿òÓëÄÚ±ß¿òµÈ¿í
+//×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½Ú±ß¿ï¿½È¿ï¿½
 //*/
 
-void BK_ChooseMenu_Paint(void) {  //»æÖÆÑ¡Êý²Ëµ¥9¸ö·½¸ñ
-	//ÒÔÏÂÊÇ´ó·½¸ñ»æÖÆ=======================================================================================
-	setlinecolor(RGB(105, 105, 105)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(RGB(211, 211, 211));  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+void BK_ChooseMenu_Paint(void) {  //ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ëµï¿½9ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ó·½¸ï¿½ï¿½ï¿½ï¿½=======================================================================================
+	setlinecolor(RGB(105, 105, 105)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(RGB(211, 211, 211));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
-	for (int i = 0; i <= 2; i++) { //·½¸ñ»æÖÆ
+	for (int i = 0; i <= 2; i++) { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int j = 0; j <= 2; j++) {
 			fillrectangle((i + 1) * NUM_BLOCKDISTANCE + i * NUM_BLOCKSIZE,
 				(j + 1) * NUM_BLOCKDISTANCE + j * NUM_BLOCKSIZE,
@@ -220,7 +219,7 @@ int  a[1000];
 struct  point
 {
 	int  x, y, c;
-	inline  void  zh(int  tt) { x = (tt - 1) / 81 + 1; y = ((tt - 1) % 81) / 9 + 1; c = ((tt - 1) % 9) + 1; }//½«ttÖµ×ª»ØÀ´
+	inline  void  zh(int  tt) { x = (tt - 1) / 81 + 1; y = ((tt - 1) % 81) / 9 + 1; c = ((tt - 1) % 9) + 1; }//ï¿½ï¿½ttÖµ×ªï¿½ï¿½ï¿½ï¿½
 }ans[1000];
 
 struct  node
@@ -279,7 +278,7 @@ inline  void  back(int  x)
 }
 inline bool dance(int  x)
 {
-	//´òÁËÎÞÊý±éµÄ´úÂë
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
 	if (!p[0].r)
 	{
 		for (int i = 1; i <= x; i++)
@@ -317,7 +316,7 @@ inline bool dance(int  x)
 }
 int SudokuInfo::Dlx_solve()
 {
-	memset(bol, false, sizeof(bol));//Çå0
+	memset(bol, false, sizeof(bol));//ï¿½ï¿½0
 	clear(4 * 9 * 9);
 	for (int i = 1; i <= 9; i++)
 	{
@@ -340,7 +339,7 @@ int SudokuInfo::Dlx_solve()
 			}
 			else
 			{
-				for (int k = 1; k <= 9; k++)//Ã¶¾Ùk
+				for (int k = 1; k <= 9; k++)//Ã¶ï¿½ï¿½k
 				{
 					if (!bol[81 + (i - 1) * 9 + k] && !bol[162 + (j - 1) * 9 + k] && !bol[243 + (((i - 1) / 3) * 3 + (j - 1) / 3) * 9 + k]
 						// &&!bol[324 + k] && !bol[333 + k]
@@ -357,7 +356,7 @@ int SudokuInfo::Dlx_solve()
 			}
 		}
 	}
-	for (int i = 1; i <= 324; i++)//Õâ¸öÒª´òÔÚÍâÃæ£¬ÒòÎªÈç¹ûÔÚforÑ­»·ÀïÃæÉ¾³ýµÄ»°£¬»áÒòÎªlast²¢Ã»ÓÐ¸üÐÂ¶øµ¼ÖÂÔÚaddÀïÃæ°ÑÉ¾³ýµÄ½ÚµãÖØÐÂ»¹Ô­
+	for (int i = 1; i <= 324; i++)//ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ£¬ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½forÑ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªlastï¿½ï¿½Ã»ï¿½Ð¸ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½addï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Ä½Úµï¿½ï¿½ï¿½ï¿½Â»ï¿½Ô­
 	{
 		if (bol[i])del(i);
 	}

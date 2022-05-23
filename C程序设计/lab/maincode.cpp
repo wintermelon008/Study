@@ -21,13 +21,13 @@
 
 using namespace std;
 
-int numberofNames = 0; //´æµµÊýÄ¿
-char savedfiles[MAX_SAVE][50] = { '\0' };  //µ±Ç°µÄ´æµµÃû³Æ
-int page = 0;  //´æµµ¶ÁÈ¡Ò³Âë
+int numberofNames = 0; //ï¿½æµµï¿½ï¿½Ä¿
+char savedfiles[MAX_SAVE][50] = { '\0' };  //ï¿½ï¿½Ç°ï¿½Ä´æµµï¿½ï¿½ï¿½ï¿½
+int page = 0;  //ï¿½æµµï¿½ï¿½È¡Ò³ï¿½ï¿½
 
 void sudokuCopy(int input1[][9], int input2[][9]);
 
-void exitsudoku(void);  //ÍË³ö½çÃæ
+void exitsudoku(void);  //ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½
 
 void BK_NumBlock_Paint(void);
 
@@ -41,14 +41,14 @@ void BK_Help_Paint(void);
 
 void BK_SudokuChoose_Paint(void);
 
-//°´Å¥¹¦ÄÜº¯ÊýÕûºÏ====================================================================================================
+//ï¿½ï¿½Å¥ï¿½ï¿½ï¿½Üºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½====================================================================================================
 void SudokuInfo::button_generate(void) {
 
 	sudoku.generate();
-	//»­³õÊ¼·½¸ñ
+	//ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
 	BK_NumBlock_Paint();
 
-	//ÌîÊý
+	//ï¿½ï¿½ï¿½ï¿½
 	sudoku.showsudokuPage();
 }
 
@@ -59,44 +59,44 @@ void SudokuInfo::button_solve(void) {
 
 	if (!ifs) {
 		HWND wnd = GetHWnd();
-		MessageBox(wnd, "µ±Ç°Êý¶ÀÎÞ½â!", "Êý¶À", MB_OK | MB_ICONINFORMATION);
+		MessageBox(wnd, "ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Þ½ï¿½!", "ï¿½ï¿½ï¿½ï¿½", MB_OK | MB_ICONINFORMATION);
 		return;
 	}
 
 
-	if (!findnextEmpty(0, &row, &col)) {//ÕÒµ½ÏÂÒ»¸öÎª¿ÕµÄÎ»ÖÃ
+	if (!findnextEmpty(0, &row, &col)) {//ï¿½Òµï¿½ï¿½ï¿½Ò»ï¿½ï¿½Îªï¿½Õµï¿½Î»ï¿½ï¿½
 		HWND wnd = GetHWnd();
-		MessageBox(wnd, "Çó½âÍê³É.", "Êý¶À", MB_OK | MB_ICONINFORMATION);
+		MessageBox(wnd, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.", "ï¿½ï¿½ï¿½ï¿½", MB_OK | MB_ICONINFORMATION);
 		return;
 	}
 
-	if (ifs) { //ÅÐ¶ÏÊÇ·ñÓÐ½â
+	if (ifs) { //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½Ð½ï¿½
 		
 		sudokuCopy(solutiontable[0], showsudokutable);
-		//»­³õÊ¼·½¸ñ
+		//ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
 		BK_NumBlock_Paint();
 
-		//ÌîÊý
+		//ï¿½ï¿½ï¿½ï¿½
 		sudoku.showsudokuPage();
 	}
 
 }
 
 
-//Í¼ÐÎ»¯º¯ÊýÇø==========================================================================================================
+//Í¼ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½==========================================================================================================
 /*
-Êý×Ö·½¸ñ»æÖÆ
+ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 */
 void BK_NumBlock_Paint(void) {
-	//»­×°ÓÐÊý×ÖµÄ·½¸ñ
+	//ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÄ·ï¿½ï¿½ï¿½
 
-	//ÒÔÏÂÊÇ´ó·½¸ñ»æÖÆ=======================================================================================
-	setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(RGB(65, 105, 225));  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ó·½¸ï¿½ï¿½ï¿½ï¿½=======================================================================================
+	setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(RGB(65, 105, 225));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
-	//Ñ­»·»­´ó·½¸ñ
+	//Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ó·½¸ï¿½
 	for (int i = 0; i <= 2; i++) {
 		for (int j = 0; j <= 2; j++) {
 			//int bi = i / 3, bj = j / 3;
@@ -107,9 +107,9 @@ void BK_NumBlock_Paint(void) {
 		}
 	}
 
-	//ÒÔÏÂÊÇÐ¡·½¸ñ»æÖÆ=========================================================================================
-	setlinecolor(RGB(240, 255, 255));  //»®ÏßÑÕÉ«
-	setlinestyle(PS_SOLID, 2);  //»®ÏßÑùÊ½
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½=========================================================================================
+	setlinecolor(RGB(240, 255, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
+	setlinestyle(PS_SOLID, 2);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 	for (int i = 0; i <= 2; i++) {
 		for (int j = 0; j <= 2; j++) {
@@ -136,20 +136,20 @@ void BK_NumBlock_Paint(void) {
 		}
 	}
 
-	//ÒÔÏÂÊÇlogo»æÖÆ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½logoï¿½ï¿½ï¿½ï¿½
 	RECT r = { MAIN_LOGO_BASE_WID, MAIN_LOGO_BASE_HEI,MAIN_LOGO_BASE_WID + MAIN_BUT_WID, MAIN_LOGO_BASE_HEI + MAIN_BUT_HEI };
-	//ÉèÖÃ×ÖÌå
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	settextcolor(RGB(0, 191, 255));
 	LOGFONT f;
 	gettextstyle(&f);
-	f.lfQuality = ANTIALIASED_QUALITY;		// ÉèÖÃÊä³öÐ§¹ûÎª¿¹¾â³Ý  
+	f.lfQuality = ANTIALIASED_QUALITY;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½  
 	f.lfWeight = 500;
 	f.lfHeight = 50;
 	strcpy(f.lfFaceName, _T("Calibri"));
 	f.lfItalic = false;
 	settextstyle(&f);
 
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 	drawtext("Sudoku", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
@@ -157,23 +157,23 @@ void BK_NumBlock_Paint(void) {
 
 void BK_Button_Paint(COLORREF color) {
 
-	//ÒÔÏÂÊÇ¹¦ÄÜ°´Å¥»æÖÆ======================================================================================
-	setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(color);  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½Ü°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½======================================================================================
+	setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(color);  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
-	settextcolor(RGB(191, 239, 255));  //×ÖÌåÉèÉ«
-	//ÉèÖÃ×ÖÌå
+	settextcolor(RGB(191, 239, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	LOGFONT f;
 	gettextstyle(&f);
-	f.lfQuality = ANTIALIASED_QUALITY;		// ÉèÖÃÊä³öÐ§¹ûÎª¿¹¾â³Ý  
+	f.lfQuality = ANTIALIASED_QUALITY;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½  
 	f.lfWeight = 500;
 	f.lfHeight = 18;
-	strcpy(f.lfFaceName, _T("ºÚÌå"));
+	strcpy(f.lfFaceName, _T("ï¿½ï¿½ï¿½ï¿½"));
 	settextstyle(&f);
 
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 	RECT r;
 	for (int i = 0; i < NUMBER_OF_MAIN_BUTTON; i++) {
@@ -195,34 +195,34 @@ void BK_Button_Paint(COLORREF color) {
 }
 
 /*
-»æÖÆÉèÖÃ²Ëµ¥µÄº¯Êý
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²Ëµï¿½ï¿½Äºï¿½ï¿½ï¿½
 */
 void BK_Settings_Paint(void) {
 	RECT r;
 
-	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);  //¼ÓÔØÍ¼Æ¬
+	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);  //ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
 
-	setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(RGB(39, 64, 139));  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+	setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(RGB(39, 64, 139));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
-	settextcolor(RGB(191, 239, 255));  //×ÖÌåÉèÉ«
-	//ÉèÖÃ×ÖÌå
+	settextcolor(RGB(191, 239, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	LOGFONT f;
 	gettextstyle(&f);
-	f.lfQuality = ANTIALIASED_QUALITY;		// ÉèÖÃÊä³öÐ§¹ûÎª¿¹¾â³Ý  
+	f.lfQuality = ANTIALIASED_QUALITY;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½  
 	f.lfWeight = 500;
 	f.lfHeight = 20;
-	strcpy(f.lfFaceName, _T("ºÚÌå"));
+	strcpy(f.lfFaceName, _T("ï¿½ï¿½ï¿½ï¿½"));
 	settextstyle(&f);
 
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 	f.lfHeight = 20;
 	settextstyle(&f);
 
-	for (int i = 0; i < NUMBER_OF_SETTING_BUTTON; i++) {  //°´Å¥»æÖÆ
+	for (int i = 0; i < NUMBER_OF_SETTING_BUTTON; i++) {  //ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½
 		fillrectangle(SETTING_BUT_BASE_WID, SETTING_BUT_BASE_HEI + i * (SETTING_BUT_HEI + SETTING_BUT_DISTANCE),
 					  SETTING_BUT_BASE_WID + SETTING_BUT_WID,
 					  SETTING_BUT_BASE_HEI + (i + 1) * SETTING_BUT_HEI + i * SETTING_BUT_DISTANCE);
@@ -235,57 +235,57 @@ void BK_Settings_Paint(void) {
 	}
 
 	fillrectangle(INPUT_BUT_BACKBUT_BASE_WID, INPUT_BUT_BACKBUT_BASE_HEI,
-		INPUT_BUT_BACKBUT_BASE_WID + INPUT_BUT_BACKBUT_WID, INPUT_BUT_BACKBUT_BASE_HEI + INPUT_BUT_BAVKBUT_HEI);  //·µ»Ø°´Å¥»æÖÆ
+		INPUT_BUT_BACKBUT_BASE_WID + INPUT_BUT_BACKBUT_WID, INPUT_BUT_BACKBUT_BASE_HEI + INPUT_BUT_BAVKBUT_HEI);  //ï¿½ï¿½ï¿½Ø°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½
 	r = { INPUT_BUT_BACKBUT_BASE_WID, INPUT_BUT_BACKBUT_BASE_HEI,
 				 INPUT_BUT_BACKBUT_BASE_WID + INPUT_BUT_BACKBUT_WID, INPUT_BUT_BACKBUT_BASE_HEI + INPUT_BUT_BAVKBUT_HEI };
-	drawtext("Ö÷²Ëµ¥", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½ï¿½Ëµï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
 	f.lfHeight = 40;
 	settextstyle(&f);
 
 	r = {SETTING_MENU_BASE_WID, SETTING_MENU_BASE_HEI, 
 		SETTING_MENU_BASE_WID + SETTING_MENU_WID,  SETTING_MENU_BASE_HEI + SETTING_MENU_HEI };
-	drawtext("ÓÎÏ·ÉèÖÃÓë°ïÖú", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 }
 
 
 /*
-»æÖÆ°ïÖú²Ëµ¥µÄº¯Êý
+ï¿½ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½Äºï¿½ï¿½ï¿½
 */
 void BK_Help_Paint(void) {
 
-	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);  //¼ÓÔØÍ¼Æ¬
+	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);  //ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
 
-	setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(RGB(39, 64, 139));  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+	setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(RGB(39, 64, 139));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
-	settextcolor(RGB(191, 239, 255));  //×ÖÌåÉèÉ«
-	//ÉèÖÃ×ÖÌå
+	settextcolor(RGB(191, 239, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	LOGFONT f;
 	gettextstyle(&f);
-	f.lfQuality = ANTIALIASED_QUALITY;		// ÉèÖÃÊä³öÐ§¹ûÎª¿¹¾â³Ý  
+	f.lfQuality = ANTIALIASED_QUALITY;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½  
 	f.lfWeight = 500;
 	f.lfHeight = 20;
-	strcpy(f.lfFaceName, _T("ºÚÌå"));
+	strcpy(f.lfFaceName, _T("ï¿½ï¿½ï¿½ï¿½"));
 	settextstyle(&f);
 
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 	fillrectangle(HELP_BACK_BUT_BASE_WID, HELP_BACK_BUT_BASE_HEI,
 		HELP_BACK_BUT_BASE_WID + HELP_BACK_BUT_WID, HELP_BACK_BUT_BASE_HEI + HELP_BACK_BUT_HEI);
 
 	RECT r = { HELP_BACK_BUT_BASE_WID, HELP_BACK_BUT_BASE_HEI,
 			  HELP_BACK_BUT_BASE_WID + HELP_BACK_BUT_WID, HELP_BACK_BUT_BASE_HEI + HELP_BACK_BUT_HEI };
-	drawtext("·µ»Ø", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½ï¿½ï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
 	f.lfHeight = 22;
 	f.lfOutPrecision = true;
 	settextcolor(RGB(0 ,255 ,127));
 	settextstyle(&f);
 
-	for (int i = 0; i < NUMBER_OF_MAIN_BUTTON; i++) {  //»æÖÆ½éÉÜÎÄ±¾
+	for (int i = 0; i < NUMBER_OF_MAIN_BUTTON; i++) {  //ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½
 
 		r = { HELP_WORD_BASE_WID,
 			  HELP_WORD_BASE_HEI + i * (HELP_WORD_HEI + HELP_WORD_DISTANCE),
@@ -295,94 +295,94 @@ void BK_Help_Paint(void) {
 
 	}
 
-	settextcolor(RGB(191, 239, 255));  //×ÖÌåÉèÉ«
+	settextcolor(RGB(191, 239, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
 	f.lfHeight = 40;
 	settextstyle(&f);
 
 	r = { HELP_MENU_BASE_WID, HELP_MENU_BASE_HEI,
 		HELP_MENU_BASE_WID + HELP_MENU_WID, HELP_MENU_BASE_HEI + HELP_MENU_HEI };
-	drawtext("°´Å¥¹¦ÄÜËµÃ÷", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 }
 
 /*
-»æÖÆÄ£Ê½Ñ¡Ôñ²Ëµ¥µÄº¯Êý
+ï¿½ï¿½ï¿½ï¿½Ä£Ê½Ñ¡ï¿½ï¿½Ëµï¿½ï¿½Äºï¿½ï¿½ï¿½
 */
 void BK_SudokuChoose_Paint(void) {
-	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);  //¼ÓÔØÍ¼Æ¬
+	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);  //ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
 
-	setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(RGB(39, 64, 139));  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+	setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(RGB(39, 64, 139));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
-	settextcolor(RGB(191, 239, 255));  //×ÖÌåÉèÉ«
-	//ÉèÖÃ×ÖÌå
+	settextcolor(RGB(191, 239, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	LOGFONT f;
 	gettextstyle(&f);
-	f.lfQuality = ANTIALIASED_QUALITY;		// ÉèÖÃÊä³öÐ§¹ûÎª¿¹¾â³Ý  
+	f.lfQuality = ANTIALIASED_QUALITY;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½  
 	f.lfWeight = 500;
 	f.lfHeight = 20;
-	strcpy(f.lfFaceName, _T("ºÚÌå"));
+	strcpy(f.lfFaceName, _T("ï¿½ï¿½ï¿½ï¿½"));
 	settextstyle(&f);
 
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 	fillrectangle(MOD_BACK_BUT_BASE_WID, MOD_BACK_BUT_BASE_HEI,
 		MOD_BACK_BUT_BASE_WID + MOD_BACK_BUT_WID, MOD_BACK_BUT_BASE_HEI + MOD_BACK_BUT_HEI);
 
 	RECT r = { MOD_BACK_BUT_BASE_WID, MOD_BACK_BUT_BASE_HEI,
 		MOD_BACK_BUT_BASE_WID + MOD_BACK_BUT_WID, MOD_BACK_BUT_BASE_HEI + MOD_BACK_BUT_HEI };
-	drawtext("·µ»Ø", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½ï¿½ï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
 
-	settextcolor(RGB(191, 239, 255));  //×ÖÌåÉèÉ«
+	settextcolor(RGB(191, 239, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
 	f.lfHeight = 40;
 	settextstyle(&f);
 
 	r = { MOD_MENU_BASE_WID, MOD_MENU_BASE_HEI,
 		MOD_MENU_BASE_WID + MOD_MENU_WID, MOD_MENU_BASE_HEI + MOD_MENU_HEI };
-	drawtext("Êý¶ÀÄ£Ê½ÉèÖÃ", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
 
 }
 
 
 /*
-»æÖÆÊäÈë²Ëµ¥µÄº¯Êý
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½Äºï¿½ï¿½ï¿½
 */
 void BK_Input_Paint(void)  {
 
-	setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(RGB(39, 64, 139));  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+	setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(RGB(39, 64, 139));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
-	settextcolor(RGB(191, 239, 255));  //×ÖÌåÉèÉ«
-	//ÉèÖÃ×ÖÌå
+	settextcolor(RGB(191, 239, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	LOGFONT f;
 	gettextstyle(&f);
-	f.lfQuality = ANTIALIASED_QUALITY;		// ÉèÖÃÊä³öÐ§¹ûÎª¿¹¾â³Ý  
+	f.lfQuality = ANTIALIASED_QUALITY;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½  
 	f.lfWeight = 500;
 	f.lfHeight = 20;
-	strcpy(f.lfFaceName, _T("ºÚÌå"));
+	strcpy(f.lfFaceName, _T("ï¿½ï¿½ï¿½ï¿½"));
 	settextstyle(&f);
 
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 	fillrectangle(INPUT_BUT_BACKBUT_BASE_WID, INPUT_BUT_BACKBUT_BASE_HEI,
-				 INPUT_BUT_BACKBUT_BASE_WID + INPUT_BUT_BACKBUT_WID, INPUT_BUT_BACKBUT_BASE_HEI + INPUT_BUT_BAVKBUT_HEI);  //·µ»Ø°´Å¥»æÖÆ
+				 INPUT_BUT_BACKBUT_BASE_WID + INPUT_BUT_BACKBUT_WID, INPUT_BUT_BACKBUT_BASE_HEI + INPUT_BUT_BAVKBUT_HEI);  //ï¿½ï¿½ï¿½Ø°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½
 	RECT r = { INPUT_BUT_BACKBUT_BASE_WID, INPUT_BUT_BACKBUT_BASE_HEI,
 				 INPUT_BUT_BACKBUT_BASE_WID + INPUT_BUT_BACKBUT_WID, INPUT_BUT_BACKBUT_BASE_HEI + INPUT_BUT_BAVKBUT_HEI };
-	drawtext("Ö÷²Ëµ¥", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½ï¿½Ëµï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 }
 
 /*
-»æÖÆ¼ÓÔØ²Ëµ¥µÄº¯Êý
+ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½Ø²Ëµï¿½ï¿½Äºï¿½ï¿½ï¿½
 */
 void Loadsaves(void) {
 	
 	FILE *fnames = fopen("name.txt", "a+");
-	int i = 0; //¼ÇÂ¼ÎÄ¼þÃûÊýÄ¿
+	int i = 0; //ï¿½ï¿½Â¼ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 
 	if (fnames == NULL) {
 		//printf("No available saved sudokus.\n");
@@ -408,30 +408,30 @@ void Loadsaves(void) {
 }
 
 
-void  SudokuInfo::LoadChoose(int page) {  //´æµµ½çÃæÇÐ»»
+void  SudokuInfo::LoadChoose(int page) {  //ï¿½æµµï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½
 
 	RECT r;
 
-	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);  //¼ÓÔØÍ¼Æ¬
+	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);  //ï¿½ï¿½ï¿½ï¿½Í¼Æ¬
 
-	setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(RGB(39, 64, 139));  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+	setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(RGB(39, 64, 139));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
-	settextcolor(RGB(191, 239, 255));  //×ÖÌåÉèÉ«
-	//ÉèÖÃ×ÖÌå
+	settextcolor(RGB(191, 239, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	LOGFONT f;
 	gettextstyle(&f);
-	f.lfQuality = ANTIALIASED_QUALITY;		// ÉèÖÃÊä³öÐ§¹ûÎª¿¹¾â³Ý  
+	f.lfQuality = ANTIALIASED_QUALITY;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½  
 	f.lfWeight = 500;
 	f.lfHeight = 20;
-	strcpy(f.lfFaceName, _T("ºÚÌå"));
+	strcpy(f.lfFaceName, _T("ï¿½ï¿½ï¿½ï¿½"));
 	settextstyle(&f);
 
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
-	for (int i = 0; i <= 4; i++) {  //»æÖÆÎå¸ö´æµµ°´Å¥
+	for (int i = 0; i <= 4; i++) {  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æµµï¿½ï¿½Å¥
 		fillrectangle(LOAD_BUT_BASE_WID,
 			LOAD_BUT_BASE_HEI + i * (LOAD_BUT_HEI + LOAD_BUT_DISTANCE),
 			LOAD_BUT_BASE_WID + 1 * LOAD_BUT_WID,
@@ -445,37 +445,37 @@ void  SudokuInfo::LoadChoose(int page) {  //´æµµ½çÃæÇÐ»»
 	}
 
 	fillrectangle(LOAD_BACKBUT_BASE_WID, LOAD_BACKBUT_BASE_HEI,
-		LOAD_BACKBUT_BASE_WID + LOAD_BACKBUT_WID, LOAD_BACKBUT_BASE_HEI + LOAD_BAVKBUT_HEI);  //·µ»Ø°´Å¥»æÖÆ
+		LOAD_BACKBUT_BASE_WID + LOAD_BACKBUT_WID, LOAD_BACKBUT_BASE_HEI + LOAD_BAVKBUT_HEI);  //ï¿½ï¿½ï¿½Ø°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½
 	r = { LOAD_BACKBUT_BASE_WID, LOAD_BACKBUT_BASE_HEI,
 				  LOAD_BACKBUT_BASE_WID + LOAD_BACKBUT_WID, LOAD_BACKBUT_BASE_HEI + LOAD_BAVKBUT_HEI };
-	drawtext("Ö÷²Ëµ¥", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½ï¿½Ëµï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
 	if (page == 0) {
-		setfillcolor(RGB(105, 105, 105));  //¹æ¶¨Ìî³äÉ«
+		setfillcolor(RGB(105, 105, 105));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
 	}
 	else {
-		setfillcolor(RGB(39, 64, 139));  //¹æ¶¨Ìî³äÉ«
+		setfillcolor(RGB(39, 64, 139));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
 	}
 	fillrectangle(LAST_PAGE_BASE_WID, LAST_PAGE_BASE_HEI, LAST_PAGE_BASE_WID + LAST_PAGE_WID, LAST_PAGE_BASE_HEI + LAST_PAGE_HEI);
 
 	r = { LAST_PAGE_BASE_WID, LAST_PAGE_BASE_HEI, LAST_PAGE_BASE_WID + LAST_PAGE_WID, LAST_PAGE_BASE_HEI + LAST_PAGE_HEI };
-	drawtext("ÉÏÒ»Ò³", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½Ò»Ò³", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
 	if (page == 3) {
-		setfillcolor(RGB(105, 105, 105));  //¹æ¶¨Ìî³äÉ«
+		setfillcolor(RGB(105, 105, 105));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
 	}
 	else {
-		setfillcolor(RGB(39, 64, 139));  //¹æ¶¨Ìî³äÉ«
+		setfillcolor(RGB(39, 64, 139));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
 	}
 	fillrectangle(NEXT_PAGE_BASE_WID, NEXT_PAGE_BASE_HEI, NEXT_PAGE_BASE_WID + NEXT_PAGE_WID, NEXT_PAGE_BASE_HEI + NEXT_PAGE_HEI);
 
 	r = { NEXT_PAGE_BASE_WID, NEXT_PAGE_BASE_HEI, NEXT_PAGE_BASE_WID + NEXT_PAGE_WID, NEXT_PAGE_BASE_HEI + NEXT_PAGE_HEI };
-	drawtext("ÏÂÒ»Ò³", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½Ò»Ò³", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
-	//Ïà¹ØÎÄ×Ö»æÖÆ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½
 	settextcolor(RGB(224, 255, 255));
 	gettextstyle(&f);
-	f.lfQuality = ANTIALIASED_QUALITY;		// ÉèÖÃÊä³öÐ§¹ûÎª¿¹¾â³Ý  
+	f.lfQuality = ANTIALIASED_QUALITY;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½  
 	f.lfWeight = 500;
 	f.lfHeight = 30;
 	strcpy(f.lfFaceName, _T("Calibri"));
@@ -485,7 +485,7 @@ void  SudokuInfo::LoadChoose(int page) {  //´æµµ½çÃæÇÐ»»
 	f.lfHeight = 40;
 	settextstyle(&f);
 	r = { LOAD_MENU_BASE_WID, LOAD_MENU_BASE_HEI, LOAD_MENU_BASE_WID + LOAD_MENU_WID, LOAD_MENU_BASE_HEI + LOAD_MENU_HEI };
-	drawtext("´æµµÑ¡Ôñ", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½æµµÑ¡ï¿½ï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
 	f.lfHeight = 20;
 	settextstyle(&f);
@@ -500,20 +500,20 @@ void  SudokuInfo::LoadChoose(int page) {  //´æµµ½çÃæÇÐ»»
 
 
 /*
-Êý×ÖÏÔÊ¾º¯Êý
-½«Êý¶ÀÊä³öµ½µ±Ç°½çÃæÉÏ
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 */
-void SudokuInfo::showsudokuPage(void) {  //½«Êý¶ÀÊä³öµ½µ±Ç°½çÃæÉÏ
+void SudokuInfo::showsudokuPage(void) {  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	int bi = 0, bj = 0;
 
-	settextstyle(40, 0, _T("Consolas")); //ÉèÖÃ×ÖÌå
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	settextstyle(40, 0, _T("Consolas")); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 	for (int i = 0; i <= 8; i++) {
 		for (int j = 0; j <= 8; j++) {
 			bi = i / 3;
 			bj = j / 3;
 
-			settextcolor(RGB(255, 255, 255));  //×ÖÌåÉèÎª°×É«
+			settextcolor(RGB(255, 255, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
 
 			if (startstatetable[i][j]) {
 				settextcolor(RGB(151, 255, 255));
@@ -522,65 +522,65 @@ void SudokuInfo::showsudokuPage(void) {  //½«Êý¶ÀÊä³öµ½µ±Ç°½çÃæÉÏ
 			RECT r = { NUM_BASE_WID + j * BLOCK_SIZE + bj * BLOCK_DISTANCE,
 					   NUM_BASE_HEI + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 					   NUM_BASE_WID + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE,
-					   NUM_BASE_HEI + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE };  //È·¶¨Êä³ö·½¸ñ
+					   NUM_BASE_HEI + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE };  //È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 			drawtext(showsudokutable[i][j] + 48, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 		}
 	}
 }
 
-int numberChoose(void) {  //Ñ¡Êý´°¿Ú,·µ»ØÑ¡µÄÊý
+int numberChoose(void) {  //Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½
 
 	LPTSTR s = new char[10];
-	InputBox(s, 10, (LPCTSTR)"ÇëÊäÈëÄãÒªÊäÈëµÄÊý\n·¶Î§ÊÇ1µ½9", (LPCTSTR)"ÊäÈëÊý×Ö");
+	InputBox(s, 10, (LPCTSTR)"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\nï¿½ï¿½Î§ï¿½ï¿½1ï¿½ï¿½9", (LPCTSTR)"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	int r = _wtoi((wchar_t *)s);
 	if (r >= 10 || r <= 0) r = 0;
 
 	return r;
 }
 
-//Ã¿Ò»Ö¡¸üÐÂº¯Êý================================================================================================
+//Ã¿Ò»Ö¡ï¿½ï¿½ï¿½Âºï¿½ï¿½ï¿½================================================================================================
 
-bool SudokuInfo::mainupdate()  // Ö÷´°¿ÚÃ¿Ö¡¸üÐÂ
+bool SudokuInfo::mainupdate()  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿Ö¡ï¿½ï¿½ï¿½ï¿½
 {
 	MOUSEMSG m;
 
 	if (MouseHit()) {
 		m = GetMouseMsg();
 
-		if (m.uMsg == WM_RBUTTONDOWN) {  //ÓÒ¼üÎªÇåÁã
+		if (m.uMsg == WM_RBUTTONDOWN) {  //ï¿½Ò¼ï¿½Îªï¿½ï¿½ï¿½ï¿½
 			int bi = 0, bj = 0;
 			for (int i = 0; i <= 8; i++) {
 				for (int j = 0; j <= 8; j++) {
 					bi = i / 3;
 					bj = j / 3;
 
-					//È·¶¨ËùµãµÄ·½¸ñ
+					//È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
 					if (m.x >= NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE &&
 						m.x <= NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE &&
 						m.y >= NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE &&
 						m.y <= NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE) {
 
-						if (!startstatetable[j][i]) { //ÅÐ¶Ï¸Ã´¦ÊÇ²»ÊÇÔ­Ê¼Êý×Ö
+						if (!startstatetable[j][i]) { //ï¿½Ð¶Ï¸Ã´ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Ô­Ê¼ï¿½ï¿½ï¿½ï¿½
 
-							setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-							setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-							setfillcolor(RGB(65, 105, 225));  //¹æ¶¨Ìî³äÉ«
-							setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+							setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+							setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+							setfillcolor(RGB(65, 105, 225));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+							setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 							fillrectangle(NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 								NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE,
 								NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 								NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE);
 
-							settextstyle(40, 0, _T("Consolas")); //ÉèÖÃ×ÖÌå
-							settextcolor(RGB(255, 255, 255));  //×ÖÌåÉèÎª°×É«
-							setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+							settextstyle(40, 0, _T("Consolas")); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+							settextcolor(RGB(255, 255, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
+							setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 							RECT r = { NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 							   NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE,
 							   NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
-							   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·¶¨Êä³ö·½¸ñ
+							   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 							drawtext(48, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 							showsudokutable[j][i] = 0;
@@ -599,13 +599,13 @@ bool SudokuInfo::mainupdate()  // Ö÷´°¿ÚÃ¿Ö¡¸üÐÂ
 		if (m.uMsg == WM_LBUTTONDOWN) {
 			int bi = 0, bj = 0;
 
-			//ÅÐ¶ÏÊÇ·ñµãÔÚ°´Å¥ÉÏ
+			//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ú°ï¿½Å¥ï¿½ï¿½
 			for (int i = 0; i < NUMBER_OF_MAIN_BUTTON; i++) {
 				if (m.x >= MAIN_BUT_BASE_WID && m.x <= MAIN_BUT_BASE_WID + MAIN_BUT_WID &&
 					m.y >= MAIN_BUT_BASE_HEI + i * MAIN_BUT_HEI + i * MAIN_BUT_DISTANCE &&
 					m.y <= MAIN_BUT_BASE_HEI + (i + 1) * MAIN_BUT_HEI + i * MAIN_BUT_DISTANCE) {
 
-					if (i != NUMBER_OF_MAIN_BUTTON - 1) (this->*main_button[i])();  //·Çexit°´Å¥ÅÐ¶Ï
+					if (i != NUMBER_OF_MAIN_BUTTON - 1) (this->*main_button[i])();  //ï¿½ï¿½exitï¿½ï¿½Å¥ï¿½Ð¶ï¿½
 					else {
 						return false;
 					}
@@ -615,32 +615,32 @@ bool SudokuInfo::mainupdate()  // Ö÷´°¿ÚÃ¿Ö¡¸üÐÂ
 			//SETTING_BUT_BASE_WID, SETTING_BUT_BASE_HEI,
 			//SETTING_BUT_BASE_WID + SETTING_BUT_WID, SETTING_BUT_BASE_HEI + SETTING_BUT_HEI
 			if (m.x >= TOSETTING_BUT_BASE_WID && m.x <= TOSETTING_BUT_BASE_WID + TOSETTING_BUT_WID &&
-				m.y >= TOSETTING_BUT_BASE_HEI && m.y <= TOSETTING_BUT_BASE_HEI + TOSETTING_BUT_HEI) {  //ÅÐ¶ÏÊÇ·ñÎªÉèÖÃ°´Å¥
+				m.y >= TOSETTING_BUT_BASE_HEI && m.y <= TOSETTING_BUT_BASE_HEI + TOSETTING_BUT_HEI) {  //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ï¿½Ã°ï¿½Å¥
 
 				sudoku.settings();
 			}
 
-			//ÅÐ¶ÏÊÇ·ñµãÔÚ·½¸ñÀï£¬ÈôÊÇÔò´ú±íÐÞ¸ÄÊý¾Ý
+			//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½
 			for (int i = 0; i <= 8; i++) {
 				for (int j = 0; j <= 8; j++) {
 					bi = i / 3;
 					bj = j / 3;
 
-					//È·¶¨ËùµãµÄ·½¸ñ
+					//È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
 					if (m.x >= NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE &&
 						m.x <= NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE &&
 						m.y >= NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE &&
 						m.y <= NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE) {
 
-						if (!startstatetable[j][i]) {  //ÅÐ¶Ï¸Ã´¦ÊÇ²»ÊÇÔ­Ê¼Êý×Ö
+						if (!startstatetable[j][i]) {  //ï¿½Ð¶Ï¸Ã´ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Ô­Ê¼ï¿½ï¿½ï¿½ï¿½
 							int ans = numberChoose();
 
 							showsudokutable[j][i] = ans;
 
-							setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-							setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-							setfillcolor(RGB(65, 105, 225));  //¹æ¶¨Ìî³äÉ«
-							setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+							setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+							setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+							setfillcolor(RGB(65, 105, 225));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+							setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 
 							fillrectangle(NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
@@ -648,12 +648,12 @@ bool SudokuInfo::mainupdate()  // Ö÷´°¿ÚÃ¿Ö¡¸üÐÂ
 								NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 								NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE);
 
-							settextstyle(40, 0, _T("Consolas")); //ÉèÖÃ×ÖÌå
-							setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+							settextstyle(40, 0, _T("Consolas")); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+							setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
-							settextcolor(RGB(255, 255, 255));  //×ÖÌåÉèÎª°×É«
-							if (!sudoku.IfFitCheck(j, i, ans, false)) {  //ÅÐ¶Ï¸ÃÊäÈëÊÇ·ñºÏ·¨
-								settextcolor(RGB(255, 69, 0));  //×ÖÌåÉèÎªºìÉ«
+							settextcolor(RGB(255, 255, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
+							if (!sudoku.IfFitCheck(j, i, ans, false)) {  //ï¿½Ð¶Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ï·ï¿½
+								settextcolor(RGB(255, 69, 0));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
 								//sudoku.solve();
 							}
 							else {
@@ -665,7 +665,7 @@ bool SudokuInfo::mainupdate()  // Ö÷´°¿ÚÃ¿Ö¡¸üÐÂ
 							RECT r = { NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 								   NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE,
 								   NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
-								   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·¶¨Êä³ö·½¸ñ
+								   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 							drawtext(ans + 48, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 						}
@@ -692,7 +692,7 @@ bool SudokuInfo::loadupdate(void) {
 		if (m.uMsg == WM_LBUTTONDOWN) {
 			int bi = 0, bj = 0;
 
-			//·µ»Ø°´Å¥ÅÐ¶Ï
+			//ï¿½ï¿½ï¿½Ø°ï¿½Å¥ï¿½Ð¶ï¿½
 
 			if (m.x >= LOAD_BACKBUT_BASE_WID && m.x <= LOAD_BACKBUT_BASE_WID + LOAD_BACKBUT_WID &&
 				m.y >= LOAD_BACKBUT_BASE_HEI && m.y <= LOAD_BACKBUT_BASE_HEI + LOAD_BAVKBUT_HEI) {
@@ -701,7 +701,7 @@ bool SudokuInfo::loadupdate(void) {
 
 			}
 
-			for (int i = 0; i <= 4; i++) {  //ÅÐ¶Ïµã»÷´æµµ°´Å¥
+			for (int i = 0; i <= 4; i++) {  //ï¿½Ð¶Ïµï¿½ï¿½ï¿½æµµï¿½ï¿½Å¥
 				if (m.x >= LOAD_BUT_BASE_WID && m.x <= LOAD_BUT_BASE_WID + 1 * LOAD_BUT_WID &&
 					m.y >= LOAD_BUT_BASE_HEI + i * (LOAD_BUT_HEI + LOAD_BUT_DISTANCE) &&
 					m.y <= LOAD_BUT_BASE_HEI + (i + 1) * LOAD_BUT_HEI + i * LOAD_BUT_DISTANCE) {
@@ -714,14 +714,14 @@ bool SudokuInfo::loadupdate(void) {
 			}
 
 			if (m.x >= LAST_PAGE_BASE_WID && m.x <= LAST_PAGE_BASE_WID + NEXT_PAGE_WID &&
-				m.y >= LAST_PAGE_BASE_HEI && m.y <= LAST_PAGE_BASE_HEI + NEXT_PAGE_HEI) {  //ÉÏÒ»Ò³°´Å¥
+				m.y >= LAST_PAGE_BASE_HEI && m.y <= LAST_PAGE_BASE_HEI + NEXT_PAGE_HEI) {  //ï¿½ï¿½Ò»Ò³ï¿½ï¿½Å¥
 				if (page > 0) page--;
 				sudoku.LoadChoose(page);
 				return true;
 			}
 
 			if (m.x >= NEXT_PAGE_BASE_WID && m.x <= NEXT_PAGE_BASE_WID + NEXT_PAGE_WID &&
-				m.y >= NEXT_PAGE_BASE_HEI && m.y <= NEXT_PAGE_BASE_HEI + NEXT_PAGE_HEI) {  //ÏÂÒ»Ò³°´Å¥
+				m.y >= NEXT_PAGE_BASE_HEI && m.y <= NEXT_PAGE_BASE_HEI + NEXT_PAGE_HEI) {  //ï¿½ï¿½Ò»Ò³ï¿½ï¿½Å¥
 				if (page < 3) page++;
 				sudoku.LoadChoose(page);
 				return true;
@@ -738,24 +738,24 @@ bool SudokuInfo::settingupdate(void) {
 	if (MouseHit()) {
 		m = GetMouseMsg();
 
-		if (m.uMsg == WM_LBUTTONDOWN) { //ÅÐ¶Ï×ó¼ü
+		if (m.uMsg == WM_LBUTTONDOWN) { //ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½
 			int bi = 0, bj = 0;
 
-			//·µ»Ø°´Å¥ÅÐ¶Ï
+			//ï¿½ï¿½ï¿½Ø°ï¿½Å¥ï¿½Ð¶ï¿½
 
-			//·µ»Ø°´Å¥ÅÐ¶Ï
+			//ï¿½ï¿½ï¿½Ø°ï¿½Å¥ï¿½Ð¶ï¿½
 			if (m.x >= INPUT_BUT_BACKBUT_BASE_WID && m.x <= INPUT_BUT_BACKBUT_BASE_WID + INPUT_BUT_BACKBUT_WID &&
 				m.y >= INPUT_BUT_BACKBUT_BASE_HEI && m.y <= INPUT_BUT_BACKBUT_BASE_HEI + INPUT_BUT_BAVKBUT_HEI) {
 				return false;
 			}
 
-			//ÅÐ¶ÏÊÇ·ñµãÔÚ°´Å¥ÉÏ
+			//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ú°ï¿½Å¥ï¿½ï¿½
 			for (int i = 0; i < NUMBER_OF_SETTING_BUTTON; i++) {
 				if (m.x >= SETTING_BUT_BASE_WID && m.x <= SETTING_BUT_BASE_WID + SETTING_BUT_WID &&
 					m.y >= SETTING_BUT_BASE_HEI + i * SETTING_BUT_HEI + i * SETTING_BUT_DISTANCE &&
 					m.y <= SETTING_BUT_BASE_HEI + (i + 1) * SETTING_BUT_HEI + i * SETTING_BUT_DISTANCE) {
 
-					(this->*setting_button[i])();  //°´Å¥ÅÐ¶Ï
+					(this->*setting_button[i])();  //ï¿½ï¿½Å¥ï¿½Ð¶ï¿½
 
 				}
 			}
@@ -772,10 +772,10 @@ bool SudokuInfo::helpupdate(void) {
 	if (MouseHit()) {
 		m = GetMouseMsg();
 
-		if (m.uMsg == WM_LBUTTONDOWN) { //ÅÐ¶Ï×ó¼ü
+		if (m.uMsg == WM_LBUTTONDOWN) { //ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½
 			int bi = 0, bj = 0;
 
-			//·µ»Ø°´Å¥ÅÐ¶Ï
+			//ï¿½ï¿½ï¿½Ø°ï¿½Å¥ï¿½Ð¶ï¿½
 			if (m.x >= HELP_BACK_BUT_BASE_WID && m.x <= HELP_BACK_BUT_BASE_WID + HELP_BACK_BUT_WID &&
 				m.y >= HELP_BACK_BUT_BASE_HEI && m.y <= HELP_BACK_BUT_BASE_HEI + HELP_BACK_BUT_HEI) {
 				return false;
@@ -791,44 +791,44 @@ bool SudokuInfo::sudokuSetupdate(void) {
 	gettextstyle(&f);
 	f.lfWeight = 500;
 	f.lfHeight = 20;
-	strcpy(f.lfFaceName, _T("ºÚÌå"));
+	strcpy(f.lfFaceName, _T("ï¿½ï¿½ï¿½ï¿½"));
 	settextstyle(&f);
 
 	MOUSEMSG m;
 
-	if (!ifDigsudoku) setfillcolor(RGB(105, 105, 105));  //¹æ¶¨Ìî³äÉ«
-	else setfillcolor(RGB(39, 64, 139));  //¹æ¶¨Ìî³äÉ«
+	if (!ifDigsudoku) setfillcolor(RGB(105, 105, 105));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	else setfillcolor(RGB(39, 64, 139));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
 
 	fillrectangle(MOD_BUT_BASE_WID, MOD_BUT_BASE_HEI,
 		MOD_BUT_BASE_WID + MOD_BUT_WID, MOD_BUT_BASE_HEI + MOD_BUT_HEI);
 	RECT r = { MOD_BUT_BASE_WID, MOD_BUT_BASE_HEI,
 		MOD_BUT_BASE_WID + MOD_BUT_WID, MOD_BUT_BASE_HEI + MOD_BUT_HEI };
-	drawtext("ÆÕÍ¨Êý¶À", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
-	if (ifDigsudoku) setfillcolor(RGB(105, 105, 105));  //¹æ¶¨Ìî³äÉ«
-	else setfillcolor(RGB(39, 64, 139));  //¹æ¶¨Ìî³äÉ«
+	if (ifDigsudoku) setfillcolor(RGB(105, 105, 105));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	else setfillcolor(RGB(39, 64, 139));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
 
 	fillrectangle(MOD_BUT_BASE_WID, MOD_BUT_BASE_HEI + MOD_BUT_HEI + MOD_BUT_DISTANCE,
 		MOD_BUT_BASE_WID + MOD_BUT_WID, MOD_BUT_BASE_HEI + 2 * MOD_BUT_HEI + MOD_BUT_DISTANCE);
 	r = { MOD_BUT_BASE_WID, MOD_BUT_BASE_HEI + MOD_BUT_HEI + MOD_BUT_DISTANCE,
 		MOD_BUT_BASE_WID + MOD_BUT_WID , MOD_BUT_BASE_HEI + 2 * MOD_BUT_HEI + MOD_BUT_DISTANCE };
-	drawtext("¶Ô½ÇÏßÊý¶À", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	drawtext("ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
 	//Sleep(50);
 
 	if (MouseHit()) {
 		m = GetMouseMsg();
 
-		if (m.uMsg == WM_LBUTTONDOWN) { //ÅÐ¶Ï×ó¼ü
+		if (m.uMsg == WM_LBUTTONDOWN) { //ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½
 			int bi = 0, bj = 0;
 
-			//·µ»Ø°´Å¥ÅÐ¶Ï
+			//ï¿½ï¿½ï¿½Ø°ï¿½Å¥ï¿½Ð¶ï¿½
 			if (m.x >= MOD_BACK_BUT_BASE_WID && m.x <= MOD_BACK_BUT_BASE_WID + HELP_BACK_BUT_WID &&
 				m.y >= MOD_BACK_BUT_BASE_HEI && m.y <= MOD_BACK_BUT_BASE_HEI + HELP_BACK_BUT_HEI) {
 				return false;
 			}
 
-			//¶Ô½ÇÏßÊý¶À°´Å¥ÅÐ¶Ï
+			//ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥ï¿½Ð¶ï¿½
 
 			if (m.x >= MOD_BUT_BASE_WID && m.x <= MOD_BUT_BASE_WID + MOD_BUT_WID &&
 				m.y >= MOD_BUT_BASE_HEI && m.y <= MOD_BUT_BASE_HEI + MOD_BUT_HEI) {
@@ -862,12 +862,12 @@ bool SudokuInfo::inputupdate(void) {
 		bool ifnumberEnough = numberCount >= MIN_NUMNER ? true : false;
 
 
-		int tempsudoku[9][9] = { 0 };  //ÔÝ´æÔ­Ê¼µÄÊý¶À
-		sudokuCopy(showsudokutable, tempsudoku);  //¿Õ³öÖ÷Êý¶À´°¿Ú
+		int tempsudoku[9][9] = { 0 };  //ï¿½Ý´ï¿½Ô­Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		sudokuCopy(showsudokutable, tempsudoku);  //ï¿½Õ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 		m = GetMouseMsg();
 
-		if (m.uMsg == WM_RBUTTONDOWN) {  //ÓÒ¼üÎªÇåÁã
+		if (m.uMsg == WM_RBUTTONDOWN) {  //ï¿½Ò¼ï¿½Îªï¿½ï¿½ï¿½ï¿½
 
 			int bi = 0, bj = 0;
 			for (int i = 0; i <= 8; i++) {
@@ -875,7 +875,7 @@ bool SudokuInfo::inputupdate(void) {
 					bi = i / 3;
 					bj = j / 3;
 
-					//È·¶¨ËùµãµÄ·½¸ñ
+					//È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
 					if (m.x >= NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE &&
 						m.x <= NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE &&
 						m.y >= NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE &&
@@ -883,24 +883,24 @@ bool SudokuInfo::inputupdate(void) {
 
 						if (1) {
 
-							setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-							setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-							setfillcolor(RGB(65, 105, 225));  //¹æ¶¨Ìî³äÉ«
-							setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+							setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+							setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+							setfillcolor(RGB(65, 105, 225));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+							setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 							fillrectangle(NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 								NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE,
 								NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 								NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE);
 
-							settextstyle(40, 0, _T("Consolas")); //ÉèÖÃ×ÖÌå
-							settextcolor(RGB(255, 255, 255));  //×ÖÌåÉèÎª°×É«
-							setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+							settextstyle(40, 0, _T("Consolas")); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+							settextcolor(RGB(255, 255, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
+							setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 							RECT r = { NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 							   NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE,
 							   NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
-							   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·¶¨Êä³ö·½¸ñ
+							   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 							drawtext(48, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
@@ -921,11 +921,11 @@ bool SudokuInfo::inputupdate(void) {
 
 		if (m.uMsg == WM_LBUTTONDOWN) {
 
-			//·µ»Ø°´Å¥ÅÐ¶Ï
+			//ï¿½ï¿½ï¿½Ø°ï¿½Å¥ï¿½Ð¶ï¿½
 			if (m.x >= INPUT_BUT_BACKBUT_BASE_WID && m.x <= INPUT_BUT_BACKBUT_BASE_WID + INPUT_BUT_BACKBUT_WID &&
 				m.y >= INPUT_BUT_BACKBUT_BASE_HEI && m.y <= INPUT_BUT_BACKBUT_BASE_HEI + INPUT_BUT_BAVKBUT_HEI) {
 
-				if (!numberofwrongs && ifnumberEnough) ifinputaccept = true;  //Õâ¸öÅÐ¶ÏÒª¼ÓÔÚÈ·¶¨°´Å¥ÄÇÀï
+				if (!numberofwrongs && ifnumberEnough) ifinputaccept = true;  //ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Òªï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½
 				else ifinputaccept = false;
 
 
@@ -937,19 +937,19 @@ bool SudokuInfo::inputupdate(void) {
 					int bi = i / 3;
 					int bj = j / 3;
 
-					//È·¶¨ËùµãµÄ·½¸ñ
+					//È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
 					if (m.x >= NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE &&
 						m.x <= NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE &&
 						m.y >= NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE &&
 						m.y <= NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE) {
 
-						if (1) {  //ÅÐ¶Ï¸Ã´¦ÊÇ²»ÊÇÔ­Ê¼Êý×Ö
+						if (1) {  //ï¿½Ð¶Ï¸Ã´ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Ô­Ê¼ï¿½ï¿½ï¿½ï¿½
 							int ans = numberChoose();
 
-							setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-							setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-							setfillcolor(RGB(65, 105, 225));  //¹æ¶¨Ìî³äÉ«
-							setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+							setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+							setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+							setfillcolor(RGB(65, 105, 225));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+							setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 
 							fillrectangle(NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
@@ -957,12 +957,12 @@ bool SudokuInfo::inputupdate(void) {
 								NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 								NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE);
 
-							settextstyle(40, 0, _T("Consolas")); //ÉèÖÃ×ÖÌå
-							setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+							settextstyle(40, 0, _T("Consolas")); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+							setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
-							settextcolor(RGB(255, 255, 255));  //×ÖÌåÉèÎª°×É«
-							if (!sudoku.IfFitCheck(j, i, ans, false)) {  //ÅÐ¶Ï¸ÃÊäÈëÊÇ·ñºÏ·¨
-								settextcolor(RGB(255, 69, 0));  //×ÖÌåÉèÎªºìÉ«
+							settextcolor(RGB(255, 255, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
+							if (!sudoku.IfFitCheck(j, i, ans, false)) {  //ï¿½Ð¶Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ï·ï¿½
+								settextcolor(RGB(255, 69, 0));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
 
 								if (!wrongState[j][i]) numberofwrongs++;
 
@@ -978,7 +978,7 @@ bool SudokuInfo::inputupdate(void) {
 							RECT r = { NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 								   NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE,
 								   NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
-								   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·¶¨Êä³ö·½¸ñ
+								   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 							drawtext(ans + 48, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 						}
@@ -994,12 +994,12 @@ bool SudokuInfo::inputupdate(void) {
 
 
 /*
-Êý¶À³õÊ¼´°¿Ú
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
 */
 void entersudoku(void) {
 	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);
 
-	//ÉèÖÃ×ÖÌå
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	settextcolor(RGB(0, 191, 255));
 	LOGFONT f;
 	gettextstyle(&f);
@@ -1009,13 +1009,13 @@ void entersudoku(void) {
 	f.lfItalic = true;
 	settextstyle(&f);
 
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 	RECT r = { EXIT_BASE_WID, EXIT_BASE_HEI, EXIT_BASE_WID + EXIT_WID, EXIT_BASE_HEI + EXIT_BASE_HEI };
 
 	drawtext("Welcome to my Sudoku world!", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
-	//ÉèÖÃ×ÖÌå
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	settextcolor(RGB(224, 255, 255));
 	gettextstyle(&f);
 	f.lfWeight = 500;
@@ -1038,12 +1038,12 @@ void entersudoku(void) {
 }
 
 /*
-ÍË³öÊý¶À´°¿Ú
+ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 */
 void exitsudoku(void) {  
 	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);
 
-	//ÉèÖÃ×ÖÌå
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	settextcolor(RGB(0 ,191 ,255));
 	LOGFONT f;
 	gettextstyle(&f);
@@ -1053,13 +1053,13 @@ void exitsudoku(void) {
 	f.lfItalic = false;
 	settextstyle(&f);
 
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
 	RECT r = { EXIT_BASE_WID, EXIT_BASE_HEI, EXIT_BASE_WID + EXIT_WID, EXIT_BASE_HEI + EXIT_BASE_HEI };
 
 	drawtext("Thanks for your playing!", &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
-	//ÉèÖÃ×ÖÌå
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	settextcolor(RGB(224, 255, 255));
 	gettextstyle(&f);
 	f.lfWeight = 500;
@@ -1089,22 +1089,22 @@ void exitsudoku(void) {
 
 
 //=====================================================================================================
-//Íâ½Óµ÷ÓÃº¯ÊýÏ¸½Ú²¿·Ö
+//ï¿½ï¿½Óµï¿½ï¿½Ãºï¿½ï¿½ï¿½Ï¸ï¿½Ú²ï¿½ï¿½ï¿½
 //=====================================================================================================
 
-//DLXËã·¨=======================================================================================================
+//DLXï¿½ã·¨=======================================================================================================
 
 struct Node {
-	Node *up, *down, *left, *right, *colRoot, *rowRoot;//ÉÏÏÂ×óÓÒËÄ¸öÖ¸ÕëÒÔ¼°Ö¸ÏòÐÐÁÐ¶ÔÏóµÄÖ¸Õë
-	int Num;//ÐÐ¶ÔÏóÌØÓÐ,¼ÇÂ¼ÐÐÊý
-	int Size;//ÁÐ¶ÔÏóÌØÓÐ,¼ÇÂ¼¸ÃÁÐÔªËØÊý
-	Node(int i = -1) : Num(i), Size(0) {};//¹¹Ôìº¯Êý
+	Node *up, *down, *left, *right, *colRoot, *rowRoot;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½Ö¸ï¿½ï¿½ï¿½Ô¼ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
+	int Num;//ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	int Size;//ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½
+	Node(int i = -1) : Num(i), Size(0) {};//ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 };
 
 class DLX {
 public:
 	DLX(vector<vector<int> > &matrix, int m, int n);
-	~DLX() { delete Head; };//Îö¹¹ÓÐµãÄÑÐ´
+	~DLX() { delete Head; };//ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ð´
 	void init();
 	void link(vector<vector<int> > &matrix);
 	void cover(Node *cRoot);
@@ -1114,8 +1114,8 @@ public:
 	int getUpdates() const { return _updates; }
 private:
 	Node *Head;
-	vector<int> result;//½á¹û´æ·ÅÔÚÕâÀï
-	int _row, _col, _updates;//¼ÇÂ¼ÐÐÁÐÊý,¸üÐÂ´ÎÊý
+	vector<int> result;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	int _row, _col, _updates;//ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½
 };
 
 DLX::DLX(vector<vector<int> > &matrix, int m, int n)
@@ -1133,7 +1133,7 @@ DLX::DLX(vector<vector<int> > &matrix, int m, int n)
 void DLX::init()
 {
 	Node *newNode;
-	for (int ix = 0; ix < _col; ++ix)//±íÍ·Î»ÖÃÏòºó²åÈë,¹¹ÔìÁÐ¶ÔÏó
+	for (int ix = 0; ix < _col; ++ix)//ï¿½ï¿½Í·Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½
 	{
 		newNode = new Node;
 		newNode->up = newNode;
@@ -1143,9 +1143,9 @@ void DLX::init()
 		newNode->right->left = newNode;
 		Head->right = newNode;
 	}
-	for (int ix = 0; ix < _row; ++ix)//±íÍ·Î»ÖÃÏòÏÂ²åÈë,¹¹ÔìÐÐ¶ÔÏó
+	for (int ix = 0; ix < _row; ++ix)//ï¿½ï¿½Í·Î»ï¿½ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½
 	{
-		newNode = new Node(_row - ix);//×¢ÒâÐòºÅÊÇ_row-ix
+		newNode = new Node(_row - ix);//×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_row-ix
 		newNode->down = Head->down;
 		newNode->up = Head;
 		newNode->down->up = newNode;
@@ -1155,7 +1155,7 @@ void DLX::init()
 
 void DLX::link(vector<vector<int> > &matrix)
 {
-	Node *current_row, *current_col, *newNode, *current;//µ±Ç°ÐÐ¶ÔÏó,µ±Ç°ÁÐ¶ÔÏó,ÐÂ½Úµã,µ±Ç°½Úµã
+	Node *current_row, *current_col, *newNode, *current;//ï¿½ï¿½Ç°ï¿½Ð¶ï¿½ï¿½ï¿½,ï¿½ï¿½Ç°ï¿½Ð¶ï¿½ï¿½ï¿½,ï¿½Â½Úµï¿½,ï¿½ï¿½Ç°ï¿½Úµï¿½
 	current_row = Head;
 	for (int row = 0; row < _row; ++row)
 	{
@@ -1165,42 +1165,42 @@ void DLX::link(vector<vector<int> > &matrix)
 		{
 			current_col = current_col->right;
 
-			if (matrix[row][col] == 0)//¾ØÕóÉÏÎª0µÄÎ»ÖÃ²»ÉèÖÃ½Úµã
+			if (matrix[row][col] == 0)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½Ã½Úµï¿½
 				continue;
 
 			newNode = new Node;
 
 			newNode->colRoot = current_col;
-			newNode->rowRoot = current_row;//ÉèÖÃµ±Ç°½Úµã¶ÔÓ¦µÄÐÐÁÐ¶ÔÏó
+			newNode->rowRoot = current_row;//ï¿½ï¿½ï¿½Ãµï¿½Ç°ï¿½Úµï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½
 
 			newNode->down = current_col;
 			newNode->up = current_col->up;
 			newNode->up->down = newNode;
-			current_col->up = newNode;//Á´½Óµ±Ç°½Úµãµ½ÁÐË«ÏòÁ´Î²¶Ë
+			current_col->up = newNode;//ï¿½ï¿½ï¿½Óµï¿½Ç°ï¿½Úµãµ½ï¿½ï¿½Ë«ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½
 
-			if (current_row->Size == 0)//ÐÐË«ÏòÁ´²»Ó¦¸Ã°ÑÐÐ¶ÔÏó°üº¬½øÀ´
+			if (current_row->Size == 0)//ï¿½ï¿½Ë«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ã°ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			{
 				current_row->right = newNode;
 				newNode->left = newNode;
 				newNode->right = newNode;
 				current_row->Size++;
 			}
-			current = current_row->right;//ÉèÖÃµ±Ç°½Úµã(¼´ÐÐ¶ÔÏóÓÒµÄ½Úµã)
+			current = current_row->right;//ï¿½ï¿½ï¿½Ãµï¿½Ç°ï¿½Úµï¿½(ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ÒµÄ½Úµï¿½)
 			newNode->left = current->left;
 			newNode->right = current;
 			newNode->left->right = newNode;
-			current->left = newNode;//Á´½Óµ±Ç°½Úµãµ½ÐÐË«ÏòÁ´Î²¶Ë
+			current->left = newNode;//ï¿½ï¿½ï¿½Óµï¿½Ç°ï¿½Úµãµ½ï¿½ï¿½Ë«ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½
 
 			current_col->Size++;
 		}
 	}
 }
 
-void DLX::cover(Node *cRoot)//¸²¸ÇÁÐ
+void DLX::cover(Node *cRoot)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 {
 	++_updates;
 	cRoot->left->right = cRoot->right;
-	cRoot->right->left = cRoot->left;//É¾³ý¸ÃÁÐ¶ÔÏó
+	cRoot->right->left = cRoot->left;//É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½
 	Node *i, *j;
 	i = cRoot->down;
 	while (i != cRoot)
@@ -1217,7 +1217,7 @@ void DLX::cover(Node *cRoot)//¸²¸ÇÁÐ
 	}
 }
 
-void DLX::recover(Node *cRoot)//Õû¸öËã·¨µÄ¾«Ëè!!
+void DLX::recover(Node *cRoot)//ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½Ä¾ï¿½ï¿½ï¿½!!
 {
 	Node *i, *j;
 	i = cRoot->up;
@@ -1239,12 +1239,12 @@ void DLX::recover(Node *cRoot)//Õû¸öËã·¨µÄ¾«Ëè!!
 
 bool DLX::Search(int k)
 {
-	if (Head->right == Head)//±í¿Õ,Ôò³É¹¦ÕÒµ½Ò»×éÐÐµÄ¼¯ºÏ
+	if (Head->right == Head)//ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½É¹ï¿½ï¿½Òµï¿½Ò»ï¿½ï¿½ï¿½ÐµÄ¼ï¿½ï¿½ï¿½
 		return true;
 
 	Node *cRoot = new Node, *c;
 	int minSize = INT_MAX;
-	for (c = Head->right; c != Head; c = c->right)//¸ù¾ÝÆô·¢Ìõ¼þÑ¡ÔñÁÐ¶ÔÏó
+	for (c = Head->right; c != Head; c = c->right)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½
 	{
 		if (c->Size < minSize)
 		{
@@ -1252,7 +1252,7 @@ bool DLX::Search(int k)
 			cRoot = c;
 			if (minSize == 1)
 				break;
-			if (minSize == 0)//ÓÐÒ»ÁÐÎª¿Õ,Ê§°Ü
+			if (minSize == 0)//ï¿½ï¿½Ò»ï¿½ï¿½Îªï¿½ï¿½,Ê§ï¿½ï¿½
 				return false;
 		}
 	}
@@ -1261,7 +1261,7 @@ bool DLX::Search(int k)
 	Node *current_row, *current;
 	for (current_row = cRoot->down; current_row != cRoot; current_row = current_row->down)
 	{
-		result.push_back(current_row->rowRoot->Num);//½«¸ÃÐÐ¼ÓÈëresultÖÐ
+		result.push_back(current_row->rowRoot->Num);//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½resultï¿½ï¿½
 		for (current = current_row->right; current != current_row; current = current->right)
 		{
 			cover(current->colRoot);
@@ -1270,13 +1270,13 @@ bool DLX::Search(int k)
 			return true;
 		for (current = current_row->left; current != current_row; current = current->left)
 			recover(current->colRoot);
-		result.pop_back();//·¢ÏÖ¸ÃÐÐ²»·ûºÏÒªÇó,»¹Ô­result
+		result.pop_back();//ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½,ï¿½ï¿½Ô­result
 	}
 	recover(cRoot);
 	return false;
 }
 
-vector<vector<int> > sudoku2matrix(string &problem)//½«Êý¶À×ª»»Îª01¾ØÕó
+vector<vector<int> > sudoku2matrix(string &problem)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Îª01ï¿½ï¿½ï¿½ï¿½
 {
 	vector<vector<int> > matrix;
 	for (int ix = 0; ix < 81; ++ix)
@@ -1305,7 +1305,7 @@ vector<vector<int> > sudoku2matrix(string &problem)//½«Êý¶À×ª»»Îª01¾ØÕó
 	return matrix;
 }
 
-vector<int> matrix2sudoku(vector<vector<int> > &matrix, vector<int> result)//½«01¾ØÕó·­ÒëÎªÊý¶À
+vector<int> matrix2sudoku(vector<vector<int> > &matrix, vector<int> result)//ï¿½ï¿½01ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
 {
 	vector<int> solution(81);
 	for (int ix = 0; ix < 81; ++ix)
@@ -1344,7 +1344,7 @@ void SudokuInfo::solve_sudoku(string &problem)
 	clock_t start_3 = clock();
 	if (!sudoku.Search())
 	{
-		cout << "¸ÃÊý¶ÀÎÞ½â!\n\n";
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ½ï¿½!\n\n";
 		return;
 	}
 	clock_t end_3 = clock();
@@ -1395,13 +1395,13 @@ bool SudokuInfo::Dlx_solve()
 }
 
 
-//Í¨ÓÃ¹¦ÄÜÐÔº¯ÊýÇø
+//Í¨ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½ï¿½
 //=======================================================================================================================
 
 
 /*
-Ëæ»úÊýº¯Êý
-·¶Î§´Ó min µ½ max Ö®¼äËæ»úÉú³É
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½Î§ï¿½ï¿½ min ï¿½ï¿½ max Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 */
 int random(int min, int max) {
 	int t;
@@ -1410,8 +1410,8 @@ int random(int min, int max) {
 }
 
 /*
-·½Õó¸´ÖÆº¯Êý
-½«input 1ÄÚÈÝ¸´ÖÆµ½input 2Ö®ÖÐ
+ï¿½ï¿½ï¿½ï¿½ï¿½Æºï¿½ï¿½ï¿½
+ï¿½ï¿½input 1ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½Æµï¿½input 2Ö®ï¿½ï¿½
 */
 void sudokuCopy(int input1[][9], int input2[][9]) {
 	for (int i = 0; i <= 8; i++) {
@@ -1424,7 +1424,7 @@ void sudokuCopy(int input1[][9], int input2[][9]) {
 
 
 /*
-Êý¶À·½Õó³õÊ¼»¯º¯Êý,³õÊ¼»¯ÖÁnumber
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½number
 mods choose: 1-7
 1-showsudokutable
 2-solutiontable
@@ -1441,26 +1441,26 @@ void SudokuInfo::allclear(int mod, int number) {
 }
 
 /*
-ÌîÈëºÏ·¨ÐÔº¯Êý
-¼ì²éµÚxÐÐµÚyÁÐÄÜ·ñÌîÈënumber
-ifself¿ØÖÆÊÇ·ñ¼ì²é(x,y)
+ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½Ôºï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½xï¿½Ðµï¿½yï¿½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½ï¿½ï¿½number
+ifselfï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½(x,y)
 */
 bool SudokuInfo::IfFitCheck(int x, int y, int number, bool ifCheckself) {
-	if (number == 0) return true;  //0Îª×Ô¼ìÊý
+	if (number == 0) return true;  //0Îªï¿½Ô¼ï¿½ï¿½ï¿½
 
-	if (ifCheckself && showsudokutable[x][y]) return false; //Èôµ±Ç°Î»ÖÃÓÐÊýÔòÊÓÎª²»¿ÉÌîÈë
+	if (ifCheckself && showsudokutable[x][y]) return false; //ï¿½ï¿½ï¿½ï¿½Ç°Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	for (int i = 0; i <= 8; i++) { //¼ì²éÄ¿±êÁÐÊÇ·ñÓÐÖØ¸´
+	for (int i = 0; i <= 8; i++) { //ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½
 		if (i == x) continue;
 		if (showsudokutable[i][y] == number) return false;
 	}
 
-	for (int j = 0; j <= 8; j++) { //¼ì²éÄ¿±êÐÐÊÇ·ñÓÐÖØ¸´
+	for (int j = 0; j <= 8; j++) { //ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½
 		if (j == y) continue;
 		if (showsudokutable[x][j] == number) return false;
 	}
 
-	for (int i = (x / 3) * 3; i <= (x / 3) * 3 + 2; i++) {  //¼ì²éÄ¿±êËùÔÚ¾Å¹¬¸ñÊÇ·ñÓÐÖØ¸´
+	for (int i = (x / 3) * 3; i <= (x / 3) * 3 + 2; i++) {  //ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Ú¾Å¹ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½
 		for (int j = (y / 3) * 3; j <= (y / 3) * 3 + 2; j++) {
 			if (i == x && j == y) continue;
 			if (showsudokutable[i][j] == number) return false;
@@ -1468,7 +1468,7 @@ bool SudokuInfo::IfFitCheck(int x, int y, int number, bool ifCheckself) {
 	}
 
 	if (ifDigsudoku && x == y) {
-		for (int i = 0; i <= 8; i++) {  //¼ì²é¶Ô½ÇÏßÔªËØÊÇ·ñÓÐÖØ¸´
+		for (int i = 0; i <= 8; i++) {  //ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½
 			if (i == x) continue;
 			if (showsudokutable[i][i] == number) {
 				return false;
@@ -1476,7 +1476,7 @@ bool SudokuInfo::IfFitCheck(int x, int y, int number, bool ifCheckself) {
 		}
 	}
 	if (ifDigsudoku && x + y == 8) {
-		for (int i = 0; i <= 8; i++) {  //¼ì²é¶Ô½ÇÏßÔªËØÊÇ·ñÓÐÖØ¸´
+		for (int i = 0; i <= 8; i++) {  //ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½
 			if (i == x) continue;
 			if (showsudokutable[i][8 - i] == number) {
 				return false;
@@ -1488,13 +1488,13 @@ bool SudokuInfo::IfFitCheck(int x, int y, int number, bool ifCheckself) {
 }
 
 
-//Ä£¿é¹¦ÄÜÐÔº¯ÊýÇø
+//Ä£ï¿½é¹¦ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½ï¿½
 //========================================================================================================================
 
 /*
-ÊäÈëº¯Êý
-ÓÉÓÃ»§ÊäÈëÒ»¸öÍêÕûµÄÊý¶À
-Èç¹ûºÏ·¨ÔòÈ¡´úÔ­showsudokutable£¬·ñÔòÖ¸³ö´íÎó²¢±£³ÖÔ­×´
+ï¿½ï¿½ï¿½ëº¯ï¿½ï¿½
+ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ô­showsudokutableï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ó²¢±ï¿½ï¿½ï¿½Ô­×´
 */
 void SudokuInfo::input(void) {
 	int temp[9][9] = { 0 };
@@ -1540,13 +1540,13 @@ void SudokuInfo::input(void) {
 	return;
 }
 
-//Êý¶ÀÉú³ÉÄ£¿é=====================================================================================
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½=====================================================================================
 
 /*
-Ëæ»úÉú³ÉÊý¶À±íµÄµÚ row ÐÐ
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ row ï¿½ï¿½
 */
 void SudokuInfo::row_random(int row) {
-	int rowtable[9] = { 1,2,3,4,5,6,7,8,9 };  //Ô­Ê¼ÐÐÄ£°å
+	int rowtable[9] = { 1,2,3,4,5,6,7,8,9 };  //Ô­Ê¼ï¿½ï¿½Ä£ï¿½ï¿½
 	int temp = 0, rdmnumber;
 	srand((unsigned)time(NULL));
 
@@ -1566,9 +1566,9 @@ void SudokuInfo::row_random(int row) {
 
 
 /*
-ÍÚ¿Õº¯Êý£ºÔÚÉú³ÉºÃµÄÊý¶À·½ÕóÖÐËæ»úÍÚ¿Õ(0Ìæ»»)
+ï¿½Ú¿Õºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉºÃµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½(0ï¿½æ»»)
 difficulty = 3; 2; 1
-ÍÚÈ¥55-60; 45-50; 35-40;
+ï¿½ï¿½È¥55-60; 45-50; 35-40;
 */
 void SudokuInfo::Holedigging(int difficulty) {
 	
@@ -1598,29 +1598,29 @@ void SudokuInfo::Holedigging(int difficulty) {
 
 
 /*
-Ëæ»úÉú³ÉÖ÷º¯Êý
-1.Ëæ»úÉú³ÉÒ»ÐÐµÄÔªËØ
-2.ÒÔ¸ÃÐÐÔªËØÎªÄ£°åÇó½âÊý¶À
-3.Ëæ»úÍÚ¿Õ£¬±£´æÖÁÊä³ö
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ðµï¿½Ôªï¿½ï¿½
+2.ï¿½Ô¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½ÎªÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+3.ï¿½ï¿½ï¿½ï¿½Ú¿Õ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 */
 void SudokuInfo::generate(void) {
 
 	allclear(7, 0);
 	row_random(0);
 
-	if(!ifDigsudoku) sudoku.Dlx_solve();  //Çó½âÊý¶À
+	if(!ifDigsudoku) sudoku.Dlx_solve();  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	else sudoku.solve();
 
-	sudokuCopy(solutiontable[0], showsudokutable);  //¸´ÖÆ½â
-	//ifneedsolve = false;  //´Ëºó²»ÐèÒª½âÁË
+	sudokuCopy(solutiontable[0], showsudokutable);  //ï¿½ï¿½ï¿½Æ½ï¿½
+	//ifneedsolve = false;  //ï¿½Ëºï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
 
-	Holedigging(DIFFICLUTY);  //¸Ãº¯ÊýµÄ²ÎÊýÎªÄÑ¶È
+	Holedigging(DIFFICLUTY);  //ï¿½Ãºï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½Îªï¿½Ñ¶ï¿½
 
 	return;
 }
 
 /*
-Çå¿Õµ±Ç°µÄÒÑÊäÈë²¿·Ö
+ï¿½ï¿½Õµï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²¿ï¿½ï¿½
 */
 void SudokuInfo::reset(void) {
 
@@ -1639,11 +1639,11 @@ void SudokuInfo::reset(void) {
 
 
 
-//Êý¶ÀÇó½âÄ£¿é====================================================================================================
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½====================================================================================================
 
 /*
-ÕÒ¿Õº¯Êý
-ÔÚshowsudokutableÖÐ·µ»ØµÚrowÐÐ¿ªÊ¼µÚÒ»¸öÎª¿ÕµÄ×ø±ê 0~8
+ï¿½Ò¿Õºï¿½ï¿½ï¿½
+ï¿½ï¿½showsudokutableï¿½Ð·ï¿½ï¿½Øµï¿½rowï¿½Ð¿ï¿½Ê¼ï¿½ï¿½Ò»ï¿½ï¿½Îªï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½ 0~8
 */
 bool SudokuInfo::findnextEmpty(int row, int *nextRow, int *nextCol) {
 	for (int i = row; i <= 8; i++) {
@@ -1659,15 +1659,15 @@ bool SudokuInfo::findnextEmpty(int row, int *nextRow, int *nextCol) {
 }
 
 /*
-Çó½âº¯Êý
-´ÓµÚrowÐÐµÚcolÁÐ¿ªÊ¼Öð¿ÕÇó½âÊý¶À
-²¢½«½â´æ´¢µ½showsudokutableÖÐ
+ï¿½ï¿½âº¯ï¿½ï¿½
+ï¿½Óµï¿½rowï¿½Ðµï¿½colï¿½Ð¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½showsudokutableï¿½ï¿½
 */
 bool SudokuInfo::solvesudoku(int row, int col) {
 	int number = 0;
 	int nextRow, nextCol;
 
-	if (row == -1 && col == -1) return false; //Í£Ö¹Çó½â
+	if (row == -1 && col == -1) return false; //Í£Ö¹ï¿½ï¿½ï¿½
 
 solvestart:
 
@@ -1682,10 +1682,10 @@ solvestart:
 		showsudokutable[row][col] = number;
 
 		if (!findnextEmpty(row, &nextRow, &nextCol)) {
-			return true;  //±íÊ¾Êý¶ÀÇó½âÍê³É£¬ÎÞÊ£Óà¿ÕÎ»
+			return true;  //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½Î»
 		}
 
-		if (!solvesudoku(nextRow, nextCol)) {  //ÏÂÒ»¸öÎ»ÖÃÎÞ½â
+		if (!solvesudoku(nextRow, nextCol)) {  //ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½ï¿½ï¿½Þ½ï¿½
 			showsudokutable[row][col] = 0;
 			continue;
 		}
@@ -1693,12 +1693,12 @@ solvestart:
 			return true;
 		}
 	}
-	return false; //ËùÓÐÊý×Ö¶¼Ìî²»½øÈ¥
+	return false; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½î²»ï¿½ï¿½È¥
 }
 
 /*
-ËÑË÷ÓÅ»¯Ëã·¨:»ùÓÚµ±Ç°¿ÉÒÔÌîÈëµÄÊý×Ö½øÐÐÓÅ»¯Çó½â
-Æô·¢Ê½ËÑË÷´úÂëÓÅ»¯
+ï¿½ï¿½ï¿½ï¿½ï¿½Å»ï¿½ï¿½ã·¨:ï¿½ï¿½ï¿½Úµï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½Å»ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å»ï¿½
 */
 bool SudokuInfo::New_solve(int row, int col) {
 
@@ -1707,22 +1707,22 @@ bool SudokuInfo::New_solve(int row, int col) {
 
 	for (int s = 0; s < availableCount[row][col]; s++) {
 		if (!IfFitCheck(row, col, availableNumbers[row][col][s], false)) {
-			continue;  //Èç¹ûÌî²»½øÈ¥¾ÍÌîÏÂÒ»¸ö
+			continue;  //ï¿½ï¿½ï¿½ï¿½î²»ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 		}
 		showsudokutable[row][col] = availableNumbers[row][col][s];
 
 		if (!findnextEmpty(row, &nextRow, &nextCol)) {
-			return true;  //±íÊ¾Êý¶ÀÇó½âÍê³É£¬ÎÞÊ£Óà¿ÕÎ»
+			return true;  //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½Î»
 		}
 
-		//¿ªÊ¼ÐÞÕýavailableÍ³¼Æ
+		//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½availableÍ³ï¿½ï¿½
 		memset(availableNumbers, 0, 729 * sizeof(int));
 		memset(availableCount, 0, 81 * sizeof(int));
 
-		for (int i = 0; i <= 8; i++) {	//½øÐÐÆÀ¹À
+		for (int i = 0; i <= 8; i++) {	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			for (int j = 0; j <= 8; j++) {
 				for (int n = 1; n <= 9; n++) {
-					if (IfFitCheck(i, j, n, false)) {  //¼ÇÂ¼¸Ã´¦¿ÉÒÔÌîµÄÊý
+					if (IfFitCheck(i, j, n, false)) {  //ï¿½ï¿½Â¼ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						availableNumbers[i][j][availableCount[i][j]++] = n;
 
 						if (minAvailable > availableCount[i][j]) {
@@ -1735,7 +1735,7 @@ bool SudokuInfo::New_solve(int row, int col) {
 			}
 		}
 
-		if (!solvesudoku(nextRow, nextCol)) {  //ÏÂÒ»¸öÎ»ÖÃÎÞ½â
+		if (!solvesudoku(nextRow, nextCol)) {  //ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½ï¿½ï¿½Þ½ï¿½
 			showsudokutable[row][col] = 0;
 			continue;
 		}
@@ -1749,19 +1749,19 @@ bool SudokuInfo::New_solve(int row, int col) {
 }
 
 /*
-Çó½âÄ£¿é·â×°º¯Êý
-¿ÉÒÔÖ±½ÓÇó½âµ±Ç°µÄshowsudokutable£¬²¢ÇÒ½«½á¹û´æÈësolutiontable[0]
+ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½âµ±Ç°ï¿½ï¿½showsudokutableï¿½ï¿½ï¿½ï¿½ï¿½Ò½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½solutiontable[0]
 */
 bool SudokuInfo::solve(void) {
-	int row = -1, col = -1;  //³õÊ¼»¯ÐÐÁÐ
+	int row = -1, col = -1;  //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	int temp = 0;
 	int tempsudokutable[9][9] = { 0 };
 	//allclear(2, 0);
 
-	for (int i = 0; i <= 8; i++) {  //ÓÅ»¯²¿·Ö
+	for (int i = 0; i <= 8; i++) {  //ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int j = 0; j <= 8; j++) {
 			for (int n = 1; n <= 9; n++) {
-				if (IfFitCheck(i, j, n, false)) {  //¼ÇÂ¼¸Ã´¦¿ÉÒÔÌîµÄÊý
+				if (IfFitCheck(i, j, n, false)) {  //ï¿½ï¿½Â¼ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					availableNumbers[i][j][availableCount[i][j]++] = n;
 
 					if (minAvailable > availableCount[i][j]) {
@@ -1784,22 +1784,22 @@ bool SudokuInfo::solve(void) {
 
 	//New_solve(min_row, min_col);  
 
-	//Æô·¢Ê½Çó½â
+	//ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½
 	
 	findnextEmpty(0, &row, &col); 
-	solvesudoku(row, col); //´«Í³Çó½â
+	solvesudoku(row, col); //ï¿½ï¿½Í³ï¿½ï¿½ï¿½
 
 	if (findnextEmpty(0, &row, &col)) {
 		sudokuCopy(tempsudokutable, showsudokutable);
 		return false;
 	}
 
-	sudokuCopy(showsudokutable, solutiontable[0]);  //±£´æ½â
+	sudokuCopy(showsudokutable, solutiontable[0]);  //ï¿½ï¿½ï¿½ï¿½ï¿½
 	sudokuCopy(tempsudokutable, showsudokutable);
 	return true;
 }
 
-//Êý¶ÀÌáÊ¾Ä£¿é===============================================================================================================
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ä£ï¿½ï¿½===============================================================================================================
 
 void SudokuInfo::hint(void) {
 
@@ -1809,23 +1809,23 @@ void SudokuInfo::hint(void) {
 
 	if (!ifs) {
 		HWND wnd = GetHWnd();
-		MessageBox(wnd, "µ±Ç°Êý¶ÀÎÞ½â.", "Êý¶À", MB_OK | MB_ICONWARNING);
+		MessageBox(wnd, "ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Þ½ï¿½.", "ï¿½ï¿½ï¿½ï¿½", MB_OK | MB_ICONWARNING);
 		return;
 	}
 	
-	if (!findnextEmpty(0, &row, &col)) {//ÕÒµ½ÏÂÒ»¸öÎª¿ÕµÄÎ»ÖÃ
+	if (!findnextEmpty(0, &row, &col)) {//ï¿½Òµï¿½ï¿½ï¿½Ò»ï¿½ï¿½Îªï¿½Õµï¿½Î»ï¿½ï¿½
 		HWND wnd = GetHWnd();
-		MessageBox(wnd, "Çó½âÍê³É.", "Êý¶À", MB_OK | MB_ICONINFORMATION);
+		MessageBox(wnd, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.", "ï¿½ï¿½ï¿½ï¿½", MB_OK | MB_ICONINFORMATION);
 		return;
 	}
 
 	int i = col, j = row, bi = col / 3, bj = row / 3;
 	showsudokutable[row][col] = solutiontable[0][row][col];
 
-	setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(RGB(65, 105, 225));  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+	setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(RGB(65, 105, 225));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 
 	fillrectangle(NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
@@ -1833,24 +1833,24 @@ void SudokuInfo::hint(void) {
 		NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 		NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE);
 
-	settextstyle(40, 0, _T("Consolas")); //ÉèÖÃ×ÖÌå
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	settextstyle(40, 0, _T("Consolas")); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
-	settextcolor(RGB(255, 106, 106));  //×ÖÌåÉèÎªÂÌÉ«
+	settextcolor(RGB(255, 106, 106));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
 
 	RECT r = { NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 		   NUM_BASE_HEI + j * BLOCK_SIZE + bj * BLOCK_DISTANCE,
 		   NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
-		   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·¶¨Êä³ö·½¸ñ
+		   NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE };  //È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	drawtext(showsudokutable[row][col] + 48, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 
 	Sleep(350);
 
-	setlinecolor(RGB(240, 255, 255)); //¹æ¶¨±ß¿òÉ«
-	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //¹æ¶¨Íâ±ß¿òÏßÐÎ
-	setfillcolor(RGB(65, 105, 225));  //¹æ¶¨Ìî³äÉ«
-	setfillstyle(BS_SOLID); //ÉèÖÃÌî³äÑùÊ½
+	setlinecolor(RGB(240, 255, 255)); //ï¿½æ¶¨ï¿½ß¿ï¿½É«
+	setlinestyle(PS_SOLID | PS_JOIN_ROUND, 2); //ï¿½æ¶¨ï¿½ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	setfillcolor(RGB(65, 105, 225));  //ï¿½æ¶¨ï¿½ï¿½ï¿½É«
+	setfillstyle(BS_SOLID); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 
 	fillrectangle(NUM_BASE_WID + i * BLOCK_SIZE + bi * BLOCK_DISTANCE,
@@ -1858,15 +1858,15 @@ void SudokuInfo::hint(void) {
 		NUM_BASE_WID + (i + 1) * BLOCK_SIZE + bi * BLOCK_DISTANCE,
 		NUM_BASE_HEI + (j + 1) * BLOCK_SIZE + bj * BLOCK_DISTANCE);
 
-	settextstyle(40, 0, _T("Consolas")); //ÉèÖÃ×ÖÌå
-	setbkmode(TRANSPARENT);  //ÉèÖÃ±³¾°Í¸Ã÷
+	settextstyle(40, 0, _T("Consolas")); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	setbkmode(TRANSPARENT);  //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
 
-	settextcolor(RGB(255, 255, 255));  //×ÖÌåÉèÎª°×É«
+	settextcolor(RGB(255, 255, 255));  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½É«
 
 	drawtext(showsudokutable[row][col] + 48, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 }
 
-//Êý¶À´æ´¢Óë¶ÁÈ¡Ä£¿é===============================================================================================================
+//ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½È¡Ä£ï¿½ï¿½===============================================================================================================
 
 void SudokuInfo::save(void) {
 
@@ -1877,7 +1877,7 @@ void SudokuInfo::save(void) {
 	char nowtime[20];
 
 	LPTSTR s = new char[20];
-	InputBox(s, 20, (LPCTSTR)"ÇëÊäÈë´æµµÃû\n(²»³¬¹ý10¸ö×Ö)\n(½öÏÞ×ÖÄ¸ÓëÊý×Ö)", (LPCTSTR)"±£´æÊý¶À");
+	InputBox(s, 20, (LPCTSTR)"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æµµï¿½ï¿½\n(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½)\n(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)", (LPCTSTR)"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
 	time(&t);
 	
@@ -1888,10 +1888,10 @@ void SudokuInfo::save(void) {
 	strcat(savename, backname);
 
 	HWND wnd = GetHWnd();
-	MessageBox(wnd, "    ±£´æ³É¹¦    ", "±£´æÊý¶À", MB_OK | MB_ICONINFORMATION);
+	MessageBox(wnd, "    ï¿½ï¿½ï¿½ï¿½É¹ï¿½    ", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", MB_OK | MB_ICONINFORMATION);
 
 
-	FILE *fp = fopen("name.txt", "a+"); //Ö¸ÏòÎÄ¼þÃûµÄÎÄ¼þÖ¸Õë
+	FILE *fp = fopen("name.txt", "a+"); //Ö¸ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Ö¸ï¿½ï¿½
 	if (fp == NULL) {
 		fp = fopen("name.txt", "w+");
 		if (fp == NULL) {
@@ -1905,7 +1905,7 @@ void SudokuInfo::save(void) {
 	fprintf(fp, "\n");
 	fclose(fp);
 
-	FILE *fnewsave = fopen(savename, "w+");  //Ö¸Ïò´ýÐ´ÈëÊý¶ÀµÄÎÄ¼þÖ¸Õë
+	FILE *fnewsave = fopen(savename, "w+");  //Ö¸ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Ö¸ï¿½ï¿½
 	if (fnewsave == NULL) {
 		HWND wnd = GetHWnd();
 		MessageBox(wnd, "Cannot make a new save.", "Save sudoku", MB_OK | MB_ICONWARNING);
@@ -1922,7 +1922,7 @@ void SudokuInfo::save(void) {
 
 }
 
-void SudokuInfo::load(void) {  //¶ÁÈ¡´æµµ½çÃæ
+void SudokuInfo::load(void) {  //ï¿½ï¿½È¡ï¿½æµµï¿½ï¿½ï¿½ï¿½
 	
 	Loadsaves();
 	page = 0;
@@ -1941,7 +1941,7 @@ void SudokuInfo::load(void) {  //¶ÁÈ¡´æµµ½çÃæ
 	sudoku.showsudokuPage();
 }
 
-void SudokuInfo::readsave(int input) {  //¶ÁÈëµÚinput¸öÊý¶À,Ö®Ç°ÐèÒª¶ÁÈë´æµµ±í 0 <= input <= 19
+void SudokuInfo::readsave(int input) {  //ï¿½ï¿½ï¿½ï¿½ï¿½inputï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,Ö®Ç°ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½æµµï¿½ï¿½ 0 <= input <= 19
 
 
 	FILE *fp = fopen(savedfiles[input], "r+");
@@ -1967,7 +1967,7 @@ void SudokuInfo::readsave(int input) {  //¶ÁÈëµÚinput¸öÊý¶À,Ö®Ç°ÐèÒª¶ÁÈë´æµµ±í 0
 
 }
 
-//ÉèÖÃÄ£¿é=======================================================================================================
+//ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½=======================================================================================================
 
 void SudokuInfo::settings(void) {
 
@@ -2020,7 +2020,7 @@ void SudokuInfo::sudokuChoose(void) {
 
 
 //==============================================================================================================
-//Ö÷º¯Êý²¿·Ö
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //==============================================================================================================
 
 int main() {
@@ -2028,7 +2028,7 @@ int main() {
 
 	sudoku.allclear(7, 0);
 
-	//³õÊ¼»¯ÓÎÏ·´°¿Ú
+	//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½
 	initgraph(STARTWID, STARTHEI);
 	HWND hWnd = GetHWnd();
 	SetWindowText(hWnd, "Sudoku");
@@ -2036,17 +2036,17 @@ int main() {
 	entersudoku();
 	Sleep(3000);
 
-	//»­³õÊ¼·½¸ñ
+	//ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
 	loadimage(NULL, _T(STARTPIC), STARTWID, STARTHEI, false);
 	sudoku.generate();
 	BK_NumBlock_Paint();
 	BK_Button_Paint(RGB(39, 64, 139));
 
 	
-	//ÌîÊý
+	//ï¿½ï¿½ï¿½ï¿½
 	sudoku.showsudokuPage();
 
-	FlushMouseMsgBuffer();  //Ö÷²Ëµ¥
+	FlushMouseMsgBuffer();  //ï¿½ï¿½ï¿½Ëµï¿½
 	while (1) {
 		if (!sudoku.mainupdate()) break;
 	}
