@@ -1,86 +1,86 @@
-#pragma once
+
 class SudokuInfo {
 public:
 
-	//Í¨ÓÃ¹¦ÄÜÐÔº¯ÊýÇø
+	//Í¨ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½ï¿½
 	//=======================================================================================================================
 
-	void allclear(int mod, int number);  //³õÊ¼»¯º¯Êý
+	void allclear(int mod, int number);  //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	bool IfFitCheck(int x, int y, int number, bool ifCheckself);  //ÌîÈëºÏ·¨ÐÔ¼ì²éº¯Êý
+	bool IfFitCheck(int x, int y, int number, bool ifCheckself);  //ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½Ô¼ï¿½éº¯ï¿½ï¿½
 
-	bool mainupdate(void);  //Ö÷´°¿ÚÃ¿Ò»Ö¡¸üÐÂ
+	bool mainupdate(void);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿Ò»Ö¡ï¿½ï¿½ï¿½ï¿½
 
-	bool loadupdate(void);  //¼ÓÔØ´°¿ÚÃ¿Ò»Ö¡¸üÐÂ
+	bool loadupdate(void);  //ï¿½ï¿½ï¿½Ø´ï¿½ï¿½ï¿½Ã¿Ò»Ö¡ï¿½ï¿½ï¿½ï¿½
 
-	bool settingupdate(void); //ÉèÖÃ´°¿ÚÃ¿Ò»Ö¡¸üÐÂ
+	bool settingupdate(void); //ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ã¿Ò»Ö¡ï¿½ï¿½ï¿½ï¿½
 
-	bool inputupdate(void);  //ÊäÈë´°¿ÚÃ¿Ö¡¸üÐÂ
+	bool inputupdate(void);  //ï¿½ï¿½ï¿½ë´°ï¿½ï¿½Ã¿Ö¡ï¿½ï¿½ï¿½ï¿½
 
-	bool helpupdate(void);  //°ïÖú´°¿ÚÃ¿Ò»Ö¡¸üÐÂ
+	bool helpupdate(void);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿Ò»Ö¡ï¿½ï¿½ï¿½ï¿½
 
-	bool sudokuSetupdate(void);  //Êý¶ÀÉèÖÃ´°¿ÚÃ¿Ò»Ö¡¸üÐÂ
+	bool sudokuSetupdate(void);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ã¿Ò»Ö¡ï¿½ï¿½ï¿½ï¿½
 
-	//Ä£¿é¹¦ÄÜÐÔº¯ÊýÇø
+	//Ä£ï¿½é¹¦ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½ï¿½
 	//========================================================================================================================
 
-	void input(void);  //ÕûÌåÊäÈëº¯Êý
+	void input(void);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ëº¯ï¿½ï¿½
 
 	//==============================================================================
 
-	void row_random(int row);  //ÐÐËæ»úº¯Êý
+	void row_random(int row);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	void Holedigging(int difficulty);  //ÍÚ¿Õ
+	void Holedigging(int difficulty);  //ï¿½Ú¿ï¿½
 
-	void generate(void);  //Éú³Éº¯Êý
+	void generate(void);  //ï¿½ï¿½ï¿½Éºï¿½ï¿½ï¿½
 
 	void button_generate(void);
 
 	//=============================================================================
 
-	void reset(void);  //ÖØÐÂÊäÈëµ±Ç°µÄÊý¶À
+	void reset(void);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ëµ±Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	bool findnextEmpty(int row, int *nextRow, int *nextCol);  //ÕÒ¿Õº¯Êý
+	bool findnextEmpty(int row, int *nextRow, int *nextCol);  //ï¿½Ò¿Õºï¿½ï¿½ï¿½
 
-	bool solvesudoku(int row, int col);   //Çó½â×Óº¯Êý
+	bool solvesudoku(int row, int col);   //ï¿½ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½
 
-	bool solve(void);  //Çó½â·â×°º¯Êý
+	bool solve(void);  //ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½
 
-	void showsudokuPage(void); //½«Êý¶ÀÊä³öµ½µ±Ç°½çÃæÉÏ
+	void showsudokuPage(void); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	void button_solve(void);
 
-	bool New_solve(int row, int col); //ÓÅ»¯Çó½â
+	bool New_solve(int row, int col); //ï¿½Å»ï¿½ï¿½ï¿½ï¿½
 
-	bool Dlx_solve();  //DLXÇó½â
+	bool Dlx_solve();  //DLXï¿½ï¿½ï¿½
 
 	void solve_sudoku(std::string &problem);
 
 	//===============================================================================
 
-	void settings(void);  //ÉèÖÃº¯Êý
+	void settings(void);  //ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½
 
-	void help(void);  //°´Å¥¹¦ÄÜËµÃ÷
+	void help(void);  //ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½
 
-	void sudokuChoose(void);  //Êý¶ÀÑ¡Ôñº¯Êý
+	void sudokuChoose(void);  //ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½
 
 	//===============================================================================
 
-	void hint(void);  //ÌáÊ¾º¯Êý
+	void hint(void);  //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 
 	//=================================================================================
 
-	void save(void);  //±£´æº¯Êý
+	void save(void);  //ï¿½ï¿½ï¿½æº¯ï¿½ï¿½
 
-	void load(void);  //ÔØÈëº¯Êý
+	void load(void);  //ï¿½ï¿½ï¿½ëº¯ï¿½ï¿½
 
-	void readsave(int input);  //´æµµ¶ÁÈëº¯Êý
+	void readsave(int input);  //ï¿½æµµï¿½ï¿½ï¿½ëº¯ï¿½ï¿½
 
-	void LoadChoose(int page);  //´æµµ½çÃæÇÐ»»º¯Êý
+	void LoadChoose(int page);  //ï¿½æµµï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 	//================================================================================
-	void(SudokuInfo :: *main_button[NUMBER_OF_MAIN_BUTTON - 1])(void) = {   //º¯ÊýÖ¸ÕëÊý×é
+	void(SudokuInfo :: *main_button[NUMBER_OF_MAIN_BUTTON - 1])(void) = {   //ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 		&SudokuInfo::button_generate,  //0
 
@@ -108,9 +108,9 @@ public:
 
 private:
 
-	int showsudokutable[9][9];  //ÏÔÊ¾³öÀ´µÄÊý¶À
-	int solutiontable[MAX_SOLUTION][9][9];  //´æ´¢µ±Ç°½âµÄÊý¶À
-	int startstatetable[9][9];  //Êý¶À³õÊ¼×´Ì¬ÏÂµÄ·ÇÁãÊý×Ö
+	int showsudokutable[9][9];  //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	int solutiontable[MAX_SOLUTION][9][9];  //ï¿½æ´¢ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	int startstatetable[9][9];  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼×´Ì¬ï¿½ÂµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 
 } sudoku;
