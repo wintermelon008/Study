@@ -1,0 +1,179 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat May  7 17:55:47 2022
+| Host         : LAPTOP-82F8TGHF running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file topmodule_control_sets_placed.rpt
+| Design       : topmodule
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   101 |
+|    Minimum number of control sets                        |   101 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   343 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   101 |
+| >= 0 to < 4        |    49 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    49 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             732 |          357 |
+| No           | No                    | Yes                    |             128 |           51 |
+| No           | Yes                   | No                     |              16 |           16 |
+| Yes          | No                    | No                     |             121 |           67 |
+| Yes          | No                    | Yes                    |             348 |          139 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+------------------------------------------------------------------------------------------------------+----------------------------------+------------------+----------------+
+|            Clock Signal           |                                             Enable Signal                                            |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-----------------------------------+------------------------------------------------------------------------------------------------------+----------------------------------+------------------+----------------+
+|  pdu/dpe/sw_1_reg[0]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[0]_LDC_i_2_n_0  |                1 |              1 |
+|  pdu/dpe/sw_1_reg[6]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[6]_LDC_i_2_n_0  |                1 |              1 |
+|  pdu/dpe/sw_1_reg[5]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[5]_LDC_i_2_n_0  |                1 |              1 |
+|  pdu/dpe/sw_1_reg[13]_LDC_i_1_n_0 |                                                                                                      | pdu/dpe/sw_1_reg[13]_LDC_i_2_n_0 |                1 |              1 |
+|  pdu/dpe/sw_1_reg[12]_LDC_i_1_n_0 |                                                                                                      | pdu/dpe/sw_1_reg[12]_LDC_i_2_n_0 |                1 |              1 |
+|  pdu/dpe/sw_1_reg[11]_LDC_i_1_n_0 |                                                                                                      | pdu/dpe/sw_1_reg[11]_LDC_i_2_n_0 |                1 |              1 |
+|  pdu/dpe/sw_1_reg[4]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[4]_LDC_i_2_n_0  |                1 |              1 |
+|  pdu/dpe/sw_1_reg[2]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[2]_LDC_i_2_n_0  |                1 |              1 |
+|  pdu/dpe/sw_1_reg[3]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[3]_LDC_i_2_n_0  |                1 |              1 |
+|  pdu/dpe/sw_1_reg[14]_LDC_i_1_n_0 |                                                                                                      | pdu/dpe/sw_1_reg[14]_LDC_i_2_n_0 |                1 |              1 |
+|  pdu/dpe/sw_1_reg[7]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[7]_LDC_i_2_n_0  |                1 |              1 |
+|  pdu/dpe/sw_1_reg[10]_LDC_i_1_n_0 |                                                                                                      | pdu/dpe/sw_1_reg[10]_LDC_i_2_n_0 |                1 |              1 |
+|  pdu/dpe/sw_1_reg[15]_LDC_i_1_n_0 |                                                                                                      | pdu/dpe/sw_1_reg[15]_LDC_i_2_n_0 |                1 |              1 |
+|  pdu/dpe/sw_1_reg[1]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[1]_LDC_i_2_n_0  |                1 |              1 |
+|  pdu/dpe/sw_1_reg[8]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[8]_LDC_i_2_n_0  |                1 |              1 |
+|  pdu/dpe/sw_1_reg[9]_LDC_i_1_n_0  |                                                                                                      | pdu/dpe/sw_1_reg[9]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                    |                                                                                                      |                                  |                2 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[8]_LDC_i_2_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[9]_LDC_i_2_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[9]_LDC_i_1_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[8]_LDC_i_1_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[1]_LDC_i_1_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[15]_LDC_i_1_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[10]_LDC_i_1_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[7]_LDC_i_1_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[6]_LDC_i_2_n_0  |                2 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[1]_LDC_i_2_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[5]_LDC_i_2_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[11]_LDC_i_2_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[4]_LDC_i_2_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[14]_LDC_i_1_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[3]_LDC_i_1_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[10]_LDC_i_2_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[2]_LDC_i_2_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[2]_LDC_i_1_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[4]_LDC_i_1_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[13]_LDC_i_2_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[12]_LDC_i_2_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[11]_LDC_i_1_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[12]_LDC_i_1_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[3]_LDC_i_2_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[13]_LDC_i_1_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[5]_LDC_i_1_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[15]_LDC_i_2_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[14]_LDC_i_2_n_0 |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[7]_LDC_i_2_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[6]_LDC_i_1_n_0  |                2 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[0]_LDC_i_2_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/dpe/sw_1_reg[0]_LDC_i_1_n_0  |                1 |              3 |
+|  clk_IBUF_BUFG                    | pdu/dpe/E[0]                                                                                         | pdu/mp/rstn                      |                2 |              4 |
+|  clk_IBUF_BUFG                    | pdu/cpu_clk_conter[10]_i_1_n_0                                                                       | pdu/mp/rstn                      |                4 |             12 |
+|  clk_IBUF_BUFG                    | pdu/db_butd/E[0]                                                                                     | pdu/mp/rstn                      |                6 |             14 |
+|  clk_IBUF_BUFG                    | cpu/ex_mem_reg/ex_mem_dm_addr/dout_reg[2]_3[0]                                                       | pdu/mp/rstn                      |               10 |             16 |
+|  clk_IBUF_BUFG                    | pdu/sg/clk400[0]_i_1_n_0                                                                             | pdu/mp/rstn                      |                5 |             17 |
+|  clk_IBUF_BUFG                    | pdu/datamove/enable_cnt[0]_i_1_n_0                                                                   |                                  |                7 |             25 |
+|  clk_IBUF_BUFG                    | pdu/db_butc/cnt                                                                                      | pdu/mp/rstn                      |                7 |             26 |
+|  clk_IBUF_BUFG                    | pdu/db_butd/cnt                                                                                      | pdu/mp/rstn                      |                7 |             26 |
+|  clk_IBUF_BUFG                    | pdu/db_butu/cnt                                                                                      | pdu/mp/rstn                      |                7 |             26 |
+|  clk_IBUF_BUFG                    | pdu/db_butl/cnt                                                                                      | pdu/mp/rstn                      |                6 |             26 |
+|  clk_IBUF_BUFG                    | pdu/db_butr/cnt                                                                                      | pdu/mp/rstn                      |                8 |             26 |
+|  clk_IBUF_BUFG                    | pdu/check_address_reg_en                                                                             | pdu/mp/rstn                      |               12 |             27 |
+|  clk_IBUF_BUFG                    |                                                                                                      | pdu/mp/rstn                      |               17 |             32 |
+|  clk_IBUF_BUFG                    | cpu/ex_mem_reg/ex_mem_dm_addr/E[0]                                                                   | pdu/mp/rstn                      |               21 |             32 |
+|  clk_IBUF_BUFG                    | pdu/breakpoint_address_reg_en                                                                        | pdu/mp/rstn                      |               10 |             32 |
+|  clk_IBUF_BUFG                    | pdu/datamove/dout[31]_i_1_n_0                                                                        | pdu/mp/rstn                      |               17 |             32 |
+|  clk_IBUF_BUFG                    | pdu/db_butc/E[0]                                                                                     | pdu/mp/rstn                      |               17 |             32 |
+|  cpu_clk_BUFG                     | cpu/id_ex_reg/id_ex_is/if_id_wen                                                                     |                                  |               60 |             96 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_2816_2943_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_2688_2815_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_256_383_0_0_i_1_n_0   |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_2560_2687_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_2432_2559_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_2304_2431_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_2048_2175_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1920_2047_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1792_1919_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1664_1791_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1536_1663_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1408_1535_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_128_255_0_0_i_1_n_0   |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_3712_3839_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1152_1279_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1024_1151_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_127_0_0_i_1_n_0     |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_3584_3711_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_896_1023_0_0_i_1_n_0  |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_3328_3455_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_3456_3583_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_768_895_0_0_i_1_n_0   |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_640_767_0_0_i_1_n_0   |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_3200_3327_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_512_639_0_0_i_1_n_0   |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_3968_4095_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_3072_3199_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_2944_3071_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_2176_2303_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_384_511_0_0_i_1_n_0   |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_3840_3967_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/dmu/dm/data_m/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1280_1407_0_0_i_1_n_0 |                                  |               32 |            128 |
+|  cpu_clk_BUFG                     | cpu/mem_wb_reg/mem_wb_dr/p_0_in1_out                                                                 |                                  |               18 |            144 |
+|  cpu_clk_BUFG                     |                                                                                                      |                                  |             1379 |           4827 |
++-----------------------------------+------------------------------------------------------------------------------------------------------+----------------------------------+------------------+----------------+
+
+

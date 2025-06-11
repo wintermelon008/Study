@@ -48,19 +48,17 @@
 
 
 module DATA_MOVE(
+    input rstn,
+    input clk,                  // work at 100MHz clock
+
     input [31:0] din,
     input [3:0] hex,
     input add,
     input del,
     input set,
-    input rstn,
-    input clk,                  // work at 100MHz clock
+    
     output reg [31:0] dout
 );
-    initial begin
-        dout <= 0;
-    end
-
     localparam TIMELIMIT = 10000000;
     reg [25:0] enable_cnt;
     reg enable_flag;

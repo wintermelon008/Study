@@ -1,0 +1,230 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto dcf79e04bdb349eeae4b097874977163 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_15 -L floating_point_v7_0_16 -L xbip_dsp48_mult_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L div_gen_v5_1_15 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot MUL_testbentch_behav xil_defaultlib.MUL_testbentch xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 11 for port 'a' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Instruction_MEM.v:42]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 11 for port 'dpra' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Instruction_MEM.v:44]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 4 for port 'ctrl_wb_dout' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:397]
+WARNING: [VRFC 10-3091] actual bit length 19 differs from formal bit length 24 for port 'mux_sel_dout' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:402]
+WARNING: [VRFC 10-3091] actual bit length 15 differs from formal bit length 16 for port 'dout' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/ID_EX_REG.v:119]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 8 for port 'dout' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/ID_EX_REG.v:135]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 8 for port 'ctrl_wb_dout' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:451]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'dout' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/MEM_WB_REG.v:111]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 3 for port 'ex_npc_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:513]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 2 for port 'npc_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipline_CTRL.v:128]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'chk_addr' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:652]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'id_sr1_addr' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:664]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'id_sr2_addr' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:666]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'id_dr_addr' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:668]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'id_rfi_we' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:670]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'id_ctrl_jumpctrl' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:671]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'id_b_sr1_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:673]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'id_b_sr2_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:674]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 32 for port 'id_npc_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:677]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'ex_sr1_mux_sel_cu' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:690]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'ex_sr2_mux_sel_cu' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:691]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'ex_sr1_mux_sel_fh' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:692]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'ex_sr2_mux_sel_fh' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:693]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'ex_dm_sr2_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:694]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'ex_sr1_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:695]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'ex_sr2_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:696]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'ex_ccu_mode' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:699]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 32 for port 'ex_ccu_error' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:701]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'mem_dmu_addr' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:705]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_dmu_rd' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:708]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_dmu_we' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:709]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_ccu_ans_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:712]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'wb_rfi_mux_sel' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:719]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'wb_rfi_dr_addr' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:720]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'wb_rfi_we' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:722]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'pc_wen' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:724]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'if_id_wen' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:725]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'id_ex_wen' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:726]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ex_mem_wen' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:727]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_wb_wen' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:728]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'if_id_clear' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:729]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'id_ex_clear' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:730]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ex_mem_clear' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:731]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_wb_clear' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:732]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'sr1_mux_sel_fh' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:733]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'sr2_mux_sel_fh' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:734]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'b_sr1_mux_sel_fh' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:735]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'b_sr2_mux_sel_fh' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:736]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 32 for port 'dm_sr2_mux_sel_fh' [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v:737]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package mult_gen_v12_0_15.mult_gen_v12_0_15_viv_comp
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package mult_gen_v12_0_15.mult_gen_v12_0_15_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package div_gen_v5_1_15.div_gen_v5_1_15_viv_comp
+Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package xbip_bram18k_v3_0_6.xbip_bram18k_v3_0_6_pkg
+Compiling package div_gen_v5_1_15.div_gen_pkg
+Compiling package div_gen_v5_1_15.pkg_addsub
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.is_mem
+Compiling module xil_defaultlib.Instruction_MEM
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.interrupt
+Compiling module xil_defaultlib.IM_UNIT
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.data_mem
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.user_stack
+Compiling module xil_defaultlib.Data_MEM
+Compiling module xil_defaultlib.MUX2
+Compiling module xil_defaultlib.DM_UNIT
+Compiling module xil_defaultlib.REG_FILE_I
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.REG
+Compiling module xil_defaultlib.IF_ID_REG
+Compiling module xil_defaultlib.REG(DATA_WIDTH=16)
+Compiling module xil_defaultlib.REG(DATA_WIDTH=4)
+Compiling module xil_defaultlib.REG(DATA_WIDTH=8)
+Compiling module xil_defaultlib.REG(DATA_WIDTH=24)
+Compiling module xil_defaultlib.ID_EX_REG
+Compiling module xil_defaultlib.EX_MEM_REG
+Compiling module xil_defaultlib.MEM_WB_REG
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.Signextend
+Compiling module xil_defaultlib.Branch_CTRL
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.BALU
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.op_resize [\op_resize(ai_width=32,bi_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.luts [\luts(c_xdevicefamily="artix7",c...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.mult_gen_v12_0_15_viv [\mult_gen_v12_0_15_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.mult_gen_v12_0_15 [\mult_gen_v12_0_15(c_xdevicefami...]
+Compiling architecture mult_gen_0_arch of entity xil_defaultlib.mult_gen_0 [mult_gen_0_default]
+Compiling module xil_defaultlib.FAST_MUL
+Compiling architecture synth of entity div_gen_v5_1_15.c_twos_comp_viv [\c_twos_comp_viv(c_width=32,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_15.cmp2s_v [\cmp2s_v(c_bus_width=32,c_regist...]
+Compiling architecture synth of entity div_gen_v5_1_15.c_twos_comp_viv [\c_twos_comp_viv(c_width=32,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_15.cmp2s_v [\cmp2s_v(c_bus_width=32,c_ainit_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=32...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity div_gen_v5_1_15.c_addsub_lut6 [\c_addsub_lut6(c_width=33,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_15.c_addsub_viv [\c_addsub_viv(c_a_width=33,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_15.addsubreg_v [\addsubreg_v(c_bus_width=33,c_ai...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=31...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=30...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=29...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=28...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=27...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=26...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=25...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=23...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=22...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=21...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=20...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=19...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=18...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=17...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=16...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=15...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=14...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=13...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=12...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=11...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=10...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=9)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=8)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=7)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=6)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=5)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=4)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=3)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=2)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(1,1)(1,1)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_sinit_va...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity div_gen_v5_1_15.c_addsub_lut6 [\c_addsub_lut6(c_width=33,c_add_...]
+Compiling architecture synth of entity div_gen_v5_1_15.c_addsub_viv [\c_addsub_viv(c_a_width=33,c_b_w...]
+Compiling architecture virtex of entity div_gen_v5_1_15.addsubreg_v [\addsubreg_v(c_bus_width=33,c_ha...]
+Compiling architecture virtex of entity div_gen_v5_1_15.dividervdc_v [\dividervdc_v(bus_num=32,bus_div...]
+Compiling architecture synth of entity div_gen_v5_1_15.c_twos_comp_viv [\c_twos_comp_viv(c_width=33,c_ai...]
+Compiling architecture virtex of entity div_gen_v5_1_15.cmp2s_v [\cmp2s_v(c_bus_width=33)(1,0)(1,...]
+Compiling architecture synth of entity div_gen_v5_1_15.bip_sdivider_synth [\bip_sdivider_synth(c_xdevicefam...]
+Compiling architecture synth of entity div_gen_v5_1_15.div_gen_synth [\div_gen_synth(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity div_gen_v5_1_15.div_gen_v5_1_15_viv [\div_gen_v5_1_15_viv(c_xdevicefa...]
+Compiling architecture xilinx of entity div_gen_v5_1_15.div_gen_v5_1_15 [\div_gen_v5_1_15(c_xdevicefamily...]
+Compiling architecture div_gen_0_arch of entity xil_defaultlib.div_gen_0 [div_gen_0_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture virtex of entity div_gen_v5_1_15.dividervdc_v [\dividervdc_v(bus_num=32,bus_div...]
+Compiling architecture synth of entity div_gen_v5_1_15.bip_sdivider_synth [\bip_sdivider_synth(c_xdevicefam...]
+Compiling architecture synth of entity div_gen_v5_1_15.div_gen_synth [\div_gen_synth(c_xdevicefamily="...]
+Compiling architecture synth of entity div_gen_v5_1_15.div_gen_v5_1_15_viv [\div_gen_v5_1_15_viv(c_xdevicefa...]
+Compiling architecture xilinx of entity div_gen_v5_1_15.div_gen_v5_1_15 [\div_gen_v5_1_15(c_xdevicefamily...]
+Compiling architecture div_unsigned_arch of entity xil_defaultlib.div_unsigned [div_unsigned_default]
+Compiling module xil_defaultlib.MUX2(DATA_WIDTH=64)
+Compiling module xil_defaultlib.FAST_DIV
+Compiling module xil_defaultlib.MUX8
+Compiling module xil_defaultlib.REG(DATA_WIDTH=3)
+Compiling module xil_defaultlib.MulDiv_Unit
+Compiling module xil_defaultlib.MUX4
+Compiling module xil_defaultlib.CalculateUnit
+Compiling module xil_defaultlib.Forwarding_Hazard
+Compiling module xil_defaultlib.Pipline_CTRL
+Compiling module xil_defaultlib.SR_MUX_CTRL
+Compiling module xil_defaultlib.DEBUG
+Compiling module xil_defaultlib.Pipeline_CPU
+Compiling module xil_defaultlib.MUL_testbentch
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MUL_testbentch_behav

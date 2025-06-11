@@ -1,0 +1,2 @@
+interrupt.v,verilog,xil_defaultlib,../../../../Final-CPU.srcs/sources_1/ip/interrupt/sim/interrupt.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../Final-CPU.srcs/sources_1/ip/div_unsigned/sim/div_unsigned.vhd" \
+
+nosort

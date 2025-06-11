@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Apr 27 15:21:53 2022
+# Process ID: 9764
+# Current directory: D:/vivado/projects/Final-CPU/Final-CPU.runs/mult_gen_0_synth_1
+# Command line: vivado.exe -log mult_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mult_gen_0.tcl
+# Log file: D:/vivado/projects/Final-CPU/Final-CPU.runs/mult_gen_0_synth_1/mult_gen_0.vds
+# Journal file: D:/vivado/projects/Final-CPU/Final-CPU.runs/mult_gen_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source mult_gen_0.tcl -notrace

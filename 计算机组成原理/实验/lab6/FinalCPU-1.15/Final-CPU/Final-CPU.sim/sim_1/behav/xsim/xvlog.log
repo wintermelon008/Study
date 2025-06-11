@@ -1,0 +1,68 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/ip/user_stack/sim/user_stack.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module user_stack
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/ip/data_mem/sim/data_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/ip/interrupt/sim/interrupt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module interrupt
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/ip/is_mem/sim/is_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module is_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/BALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Branch_CRTL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_CTRL
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/CalculateUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CalculateUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/DEBUG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DEBUG
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/DM_UNIT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Data_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/EX_MEM_REG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM_REG
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/FAST_DIV.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FAST_DIV
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/FAST_MUL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FAST_MUL
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Forwarding_Hazard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_Hazard
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/ID_EX_REG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX_REG
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/IF_ID_REG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_REG
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/IM_UNIT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_UNIT
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Instruction_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/MEM_WB_REG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB_REG
+INFO: [VRFC 10-2458] undeclared symbol csrs_dout, assumed default net type wire [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/MEM_WB_REG.v:111]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/MUX2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/MUX4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX4
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/MUX8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX8
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/MulDiv_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MulDiv_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipeline_CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Pipline_CTRL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipline_CTRL
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/REG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/REG_FILE_I.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_FILE_I
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/SR_MUX_CTRL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SR_MUX_CTRL
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sources_1/new/Signextend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Signextend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado/projects/Final-CPU/Final-CPU.srcs/sim_1/new/MUL_testbentch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUL_testbentch
+INFO: [VRFC 10-2458] undeclared symbol rstn, assumed default net type wire [D:/vivado/projects/Final-CPU/Final-CPU.srcs/sim_1/new/MUL_testbentch.v:97]

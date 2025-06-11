@@ -1,0 +1,7 @@
+Running: xsim.dir/float_testbentch_behav/xsimk.exe -simmode gui -wdb float_testbentch_behav.wdb -simrunnum 0 -socket 56121
+Design successfully loaded
+Design Loading Memory Usage: 8596 KB (Peak: 8596 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 9940 KB (Peak: 9940 KB)
+Simulation CPU Usage: 15 ms

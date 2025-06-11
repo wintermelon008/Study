@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon May  9 14:57:50 2022
+# Process ID: 20204
+# Current directory: D:/vivado/projects/Final-CPU/Final-CPU.runs/is_mem_synth_1
+# Command line: vivado.exe -log is_mem.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source is_mem.tcl
+# Log file: D:/vivado/projects/Final-CPU/Final-CPU.runs/is_mem_synth_1/is_mem.vds
+# Journal file: D:/vivado/projects/Final-CPU/Final-CPU.runs/is_mem_synth_1\vivado.jou
+#-----------------------------------------------------------
+source is_mem.tcl -notrace

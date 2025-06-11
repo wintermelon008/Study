@@ -1,0 +1,12 @@
+
+{ 
+    crc :  10172912242326653554  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto dcf79e04bdb349eeae4b097874977163 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_15 -L floating_point_v7_1_8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot float_testbentch_behav xil_defaultlib.float_testbentch xil_defaultlib.glbl" , 
+    buildDate : "May 24 2019" , 
+    buildTime : "15:06:07" , 
+    linkCmd : "D:\\vivado\\Vivado\\2019.1\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/float_testbentch_behav/xsimk.exe\"   \"xsim.dir/float_testbentch_behav/obj/xsim_0.win64.obj\" \"xsim.dir/float_testbentch_behav/obj/xsim_1.win64.obj\" \"xsim.dir/float_testbentch_behav/obj/xsim_2.win64.obj\" -L\"D:\\vivado\\Vivado\\2019.1\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
